@@ -39,11 +39,20 @@ export default function NotFound() {
             </div>
 
             <div className="flex w-full flex-col gap-4 pt-4 sm:w-auto sm:flex-row">
-              <NavigateButton navigation="/" variant="default" size="lg">
+              <NavigateButton
+                navigation="/"
+                variant="default"
+                size="lg"
+                className="cursor-pointer px-8 py-6 text-sm"
+              >
                 <HouseLineIcon className="mr-2 h-5! w-5!" />
                 Go Home
               </NavigateButton>
-              <BackButton variant="secondary" size="lg">
+              <BackButton
+                variant="secondary"
+                size="lg"
+                className="cursor-pointer px-8 py-6 text-sm"
+              >
                 <ArrowUUpLeftIcon className="mr-2 h-5! w-5!" />
                 Go Back
               </BackButton>

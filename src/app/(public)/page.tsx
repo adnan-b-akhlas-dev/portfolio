@@ -41,25 +41,25 @@ export default function HomePage() {
             </p>
 
             <div className="animate-fade-in-up flex flex-col items-center justify-center gap-4 pt-4 delay-500 sm:flex-row">
-              <Link href="/projects">
-                <Button
-                  size="lg"
-                  className="group min-w-50 px-8 py-6 font-medium text-sm shadow-lg transition-all duration-300 hover:shadow-xl"
-                >
+              <Button
+                asChild
+                size="lg"
+                className="group min-w-50 px-8 py-6 font-medium text-sm shadow-lg transition-all duration-300 hover:shadow-xl"
+              >
+                <Link href="/projects">
                   View My Projects
-                  <ArrowLineRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
+                  <ArrowLineRightIcon className="h-5! w-5! transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
 
-              <Link href="/contact">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="px-8 py-6 font-medium transition-all duration-300"
-                >
-                  Get In Touch
-                </Button>
-              </Link>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="px-8 py-6 font-medium transition-all duration-300"
+              >
+                <Link href="/contact">Get In Touch</Link>
+              </Button>
             </div>
           </div>
         </div>
