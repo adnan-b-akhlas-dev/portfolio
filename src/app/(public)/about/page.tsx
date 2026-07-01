@@ -1,0 +1,106 @@
+import Section from "@/components/shared/Section";
+import SectionTitle from "@/components/shared/SectionTitle";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  BooksIcon,
+  BriefcaseIcon,
+  FoldersIcon,
+} from "@phosphor-icons/react/dist/ssr";
+import Image from "next/image";
+
+export default function AboutPage() {
+  const stats = [
+    {
+      label: "Blogs",
+      count: 4,
+      icon: BooksIcon,
+    },
+    {
+      label: "Projects",
+      count: 4,
+      icon: FoldersIcon,
+    },
+    {
+      label: "Experience",
+      count: 4,
+      icon: BriefcaseIcon,
+    },
+  ];
+
+  return (
+    <Section>
+      <SectionTitle
+        header="About Me"
+        title="Crafting Scalable Web Experiences"
+        summary="I build modular, maintainable systems that blend elegant design with powerful, developer-first engineering principles."
+      />
+      <div className="grid items-start gap-8 lg:grid-cols-2">
+        <div className="flex justify-between lg:justify-end">
+          <div className="group relative grow">
+            {/* <div className="bg-primary/30 absolute rounded-2xl opacity-70 blur-xl transition-all duration-1000 [clip-path:polygon(25%_5%,75%_5%,100%_50%,75%_95%,25%_95%,0%_50%)] group-hover:scale-105 group-hover:opacity-100" /> */}
+            <Card className="overflow-hidden p-0 [clip-path:polygon(50%_0%,93%_25%,93%_75%,50%_100%,7%_75%,7%_25%)] lg:w-md 2xl:w-xl">
+              <CardContent className="aspect-square overflow-hidden p-0">
+                <Image
+                  src={
+                    "https://scontent.fcgp39-1.fna.fbcdn.net/v/t39.30808-6/686169204_961601579787444_7182130853074072392_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=FMxMLBxLTE0Q7kNvwE6Qz8M&_nc_oc=Adq-Jbmw6iioP_6-jcS13tzohfucdft2FqKtryuxWol1vKDruGq7VMpGaU3fR6OGa20&_nc_zt=23&_nc_ht=scontent.fcgp39-1.fna&_nc_gid=MsvojyNx3_owXzKuv7WFHw&_nc_ss=7b2a8&oh=00_AQDleem0m6EZkqI4WD1ZKwdxSz-zPu56okDr6XdYCNufYA&oe=6A4B5552"
+                  }
+                  alt={"Adnan_Bin_Akhlas"}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="relative h-full w-full rounded-lg object-cover object-[25%_100%]"
+                />
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-foreground mb-2 text-3xl font-bold">
+              {"Adnan Bin Akhlas"}
+            </h3>
+            {/* <p className="text-muted-foreground mb-4">{admin.email}</p> */}
+            <p className="text-foreground text-lg leading-relaxed">
+              {"Story incoming"}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats */}
+      <div className="col-span-2 mt-8 grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {stats.map(({ label, count, icon: Icon }) => (
+          <div key={label} className="relative overflow-hidden rounded-xl">
+            {/* Top-left gradient */}
+            <div className="from-primary/20 absolute top-16 -left-32 h-100 w-100 rounded-full bg-linear-to-br to-transparent blur-2xl" />
+            {/* Bottom-right gradient */}
+            <div className="from-chart-4/20 absolute -right-32 -bottom-32 h-100 w-85 rounded-full bg-linear-to-tl to-transparent blur-2xl" />{" "}
+            <Card className="group border-border hover:border-primary relative rounded-2xl border-2 bg-transparent p-6 text-center shadow-sm backdrop-blur-xl transition-all duration-300">
+              <CardContent className="p-0">
+                {/* subtle background glow */}
+                <div className="bg-primary/5 absolute inset-0 -z-10 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
+
+                {/* icon */}
+                <div className="mb-3 flex justify-center">
+                  <div className="bg-primary/10 group-hover:bg-primary/20 flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-300">
+                    <Icon className="text-primary h-7 w-7 transition-transform duration-300 group-hover:scale-110" />
+                  </div>
+                </div>
+
+                {/* count */}
+                <div className="text-foreground text-4xl font-semibold tracking-tight">
+                  {count ?? 0}
+                </div>
+
+                {/* label */}
+                <div className="text-muted-foreground mt-1 text-sm font-medium tracking-wide uppercase">
+                  {label}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        ))}
+      </div>
+    </Section>
+  );
+}

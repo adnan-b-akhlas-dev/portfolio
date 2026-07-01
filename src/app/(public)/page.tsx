@@ -6,7 +6,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="overflow-hidden">
       <Section>
