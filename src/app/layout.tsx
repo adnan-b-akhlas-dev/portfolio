@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Cascadia_Code, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { DevelopmentNoticeModal } from "@/components/shared/DevelopmentNoticeModal";
 
@@ -9,6 +9,14 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   variable: "--font-mono",
+  display: "swap",
+});
+
+const cascadiaCode = Cascadia_Code({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -30,6 +38,7 @@ export default function RootLayout({
         "h-full",
         "antialiased",
         "font-mono",
+        cascadiaCode.variable,
         jetbrainsMono.variable,
       )}
     >

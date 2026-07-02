@@ -27,7 +27,7 @@ export default function HomePage() {
               <div
                 className={`from-primary to-chart-4 bg-linear-to-r bg-clip-text text-transparent`}
               >
-                <strong className="italic">{user.name}</strong>
+                <strong className="font-serif italic">{user.name}</strong>
               </div>
             </h1>
 

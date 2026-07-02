@@ -9,4 +9,6 @@ export const user = {
     "I'm a Full Stack Developer who builds complete web applications — from responsive front-ends to robust back-end APIs. I care about clean code, thoughtful architecture, and shipping software that just works.",
   story:
     "My journey started with curiosity about how things work under the hood — from tinkering with Linux systems to writing my first lines of code. That curiosity grew into a passion for building full web applications end-to-end, from designing intuitive interfaces to architecting the servers and databases behind them. I'm constantly learning new tools and frameworks, and figuring out how to build software that's a little better every time.",
+  resume:
+    "https:drive.google.com/file/d/1Y_q7tCTTvB4l7CFpzdSkC--65YbpXrO2/view",
 };
