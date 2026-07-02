@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { DevelopmentNoticeModal } from "@/components/shared/DevelopmentNoticeModal";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -32,7 +33,10 @@ export default function RootLayout({
         jetbrainsMono.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <DevelopmentNoticeModal />
+      </body>
     </html>
   );
 }
