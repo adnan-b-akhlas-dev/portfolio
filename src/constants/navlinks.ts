@@ -1,9 +1,9 @@
+import LogoIcon from "@/components/icons/LogoIcon";
 import {
   BooksIcon,
   BracketsCurlyIcon,
   BriefcaseIcon,
   FoldersIcon,
-  HouseLineIcon,
   PhoneIcon,
   UserCircleIcon,
 } from "@phosphor-icons/react/dist/ssr";
@@ -12,7 +12,7 @@ export const navLinks = [
   {
     label: "Home",
     href: "/",
-    icon: HouseLineIcon,
+    icon: LogoIcon,
   },
   {
     label: "About",

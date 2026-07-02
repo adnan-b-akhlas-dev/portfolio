@@ -19,7 +19,7 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [admin, _setAdmin] = useState(true);
+  const [admin, _setAdmin] = useState(false);
   const pathname = usePathname();
 
   return (
