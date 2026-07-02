@@ -1,32 +1,11 @@
 import Section from "@/components/shared/Section";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  BooksIcon,
-  BriefcaseIcon,
-  FoldersIcon,
-} from "@phosphor-icons/react/dist/ssr";
+import { stats } from "@/constants/stats";
+import { user } from "@/constants/user";
 import Image from "next/image";
 
 export default function AboutPage() {
-  const stats = [
-    {
-      label: "Blogs",
-      count: 4,
-      icon: BooksIcon,
-    },
-    {
-      label: "Projects",
-      count: 4,
-      icon: FoldersIcon,
-    },
-    {
-      label: "Experience",
-      count: 4,
-      icon: BriefcaseIcon,
-    },
-  ];
-
   return (
     <Section>
       <SectionTitle
@@ -37,16 +16,16 @@ export default function AboutPage() {
       <div className="grid items-start gap-8 lg:grid-cols-2">
         <div className="flex justify-between lg:justify-end">
           <div className="group relative grow">
-            <Card className="overflow-hidden p-0 [clip-path:polygon(50%_0%,93%_25%,93%_75%,50%_100%,7%_75%,7%_25%)] lg:w-md 2xl:w-xl">
+            <Card className="overflow-hidden p-0 lg:w-md rounded-2xl 2xl:w-xl">
               <CardContent className="aspect-square overflow-hidden p-0">
                 <Image
-                  src={
-                    "https://scontent.fcgp39-1.fna.fbcdn.net/v/t39.30808-6/686169204_961601579787444_7182130853074072392_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=FMxMLBxLTE0Q7kNvwE6Qz8M&_nc_oc=Adq-Jbmw6iioP_6-jcS13tzohfucdft2FqKtryuxWol1vKDruGq7VMpGaU3fR6OGa20&_nc_zt=23&_nc_ht=scontent.fcgp39-1.fna&_nc_gid=MsvojyNx3_owXzKuv7WFHw&_nc_ss=7b2a8&oh=00_AQDleem0m6EZkqI4WD1ZKwdxSz-zPu56okDr6XdYCNufYA&oe=6A4B5552"
-                  }
-                  alt={"Adnan_Bin_Akhlas"}
-                  fill
+                  src={user.image}
+                  alt={user.name}
+                  width={768}
+                  height={768}
+                  loading="eager"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="relative h-full w-full rounded-lg object-cover object-[25%_100%]"
+                  className="rounded-lg object-cover object-[25%_100%]"
                 />
               </CardContent>
             </Card>
@@ -56,13 +35,11 @@ export default function AboutPage() {
         <div className="space-y-6">
           <div>
             <h3 className="text-foreground mb-2 text-3xl font-bold">
-              {"Adnan Bin Akhlas"}
+              {user.name}
             </h3>
-            <p className="text-muted-foreground mb-4">
-              {"Full Stack Developer | Mentor | Linux Enthusiat"}
-            </p>
+            <p className="text-muted-foreground mb-4">{user.bio}</p>
             <p className="text-foreground text-lg leading-relaxed">
-              {"Story incoming"}
+              {user.story}
             </p>
           </div>
         </div>

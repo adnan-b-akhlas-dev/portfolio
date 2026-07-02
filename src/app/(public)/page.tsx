@@ -1,5 +1,6 @@
 import Section from "@/components/shared/Section";
 import { Button } from "@/components/ui/button";
+import { user } from "@/constants/user";
 import {
   ArrowLineRightIcon,
   SparkleIcon,
@@ -26,25 +27,23 @@ export default function HomePage() {
               <div
                 className={`from-primary to-chart-4 bg-linear-to-r bg-clip-text text-transparent`}
               >
-                <strong>{"Adnan Bin Akhlas"}</strong>
+                <strong className="italic">{user.name}</strong>
               </div>
             </h1>
 
             <p className="text-muted-foreground animate-fade-in-up mx-auto max-w-4xl text-xl leading-relaxed font-light delay-200 sm:text-2xl md:text-3xl">
-              {"Full-Stack Developer"}
+              {user.bio}
             </p>
 
             <p className="text-muted-foreground animate-fade-in-up mx-auto max-w-3xl text-base leading-relaxed delay-300 sm:text-lg">
-              {
-                "Turning complex problems into elegant, high-performance code. Powered by modern web ecosystems and open-source tools."
-              }
+              {user.description}
             </p>
 
             <div className="animate-fade-in-up flex flex-col items-center justify-center gap-4 pt-4 delay-500 sm:flex-row">
               <Button
                 asChild
                 size="lg"
-                className="group min-w-50 px-8 py-6 font-medium text-sm shadow-lg transition-all duration-300 hover:shadow-xl"
+                className="group min-w-50 px-8 py-6 rounded-lg font-medium text-sm shadow-lg transition-all duration-300 hover:shadow-xl"
               >
                 <Link href="/projects">
                   View My Projects
@@ -56,7 +55,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="px-8 py-6 font-medium transition-all duration-300"
+                className="px-8 py-6 font-medium rounded-lg transition-all duration-300"
               >
                 <Link href="/contact">Get In Touch</Link>
               </Button>

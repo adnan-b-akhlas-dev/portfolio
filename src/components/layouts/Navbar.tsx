@@ -45,7 +45,7 @@ export default function Navbar() {
               : "-translate-x-full opacity-0 lg:translate-x-0 lg:opacity-100"
           } `}
         >
-          <div className="bg-background/80 border-border flex flex-col gap-3 border p-3 shadow-2xl backdrop-blur-md transition-all duration-300">
+          <div className="bg-background/80 border-border flex rounded-xl flex-col gap-3 border p-3 shadow-2xl backdrop-blur-md transition-all duration-300">
             {navLinks.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -54,7 +54,7 @@ export default function Navbar() {
                     <Button
                       asChild
                       className={cn(
-                        "h-12 w-12 transition-colors duration-300 hover:bg-primary hover:text-primary-foreground",
+                        "h-12 w-12 transition-colors duration-300 rounded-lg hover:bg-primary hover:text-primary-foreground",
                         {
                           "bg-primary text-primary-foreground":
                             item.href === pathname,
@@ -81,7 +81,7 @@ export default function Navbar() {
                 <TooltipTrigger asChild>
                   <Button
                     asChild
-                    className="h-12 w-12 transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
+                    className="h-12 w-12 transition-colors duration-300 rounded-lg hover:bg-primary hover:text-primary-foreground"
                     onClick={() => setIsOpen(false)}
                     variant="secondary"
                     aria-label="Dashboard"
