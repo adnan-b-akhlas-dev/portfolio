@@ -16,7 +16,7 @@ export default function AboutPage() {
       <div className="grid items-start gap-8 lg:grid-cols-2">
         <div className="flex justify-between lg:justify-end">
           <div className="group relative grow">
-            <Card className="overflow-hidden p-0 lg:w-md rounded-2xl 2xl:w-xl">
+            <Card className="overflow-hidden p-0 lg:w-md 2xl:w-xl">
               <CardContent className="aspect-square overflow-hidden p-0">
                 <Image
                   src={user.image}
@@ -53,7 +53,7 @@ export default function AboutPage() {
             <div className="from-primary/20 absolute top-16 -left-32 h-100 w-100 rounded-full bg-linear-to-br to-transparent blur-2xl" />
             {/* Bottom-right gradient */}
             <div className="from-chart-4/20 absolute -right-32 -bottom-32 h-100 w-85 rounded-full bg-linear-to-tl to-transparent blur-2xl" />{" "}
-            <Card className="group border-border hover:border-primary relative rounded-2xl border-2 bg-transparent p-6 text-center shadow-sm backdrop-blur-xl transition-all duration-300">
+            <Card className="group border-border hover:border-primary relative border-2 bg-transparent p-6 text-center shadow-sm backdrop-blur-xl transition-all duration-300">
               <CardContent className="p-0">
                 {/* subtle background glow */}
                 <div className="bg-primary/5 absolute inset-0 -z-10 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
