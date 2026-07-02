@@ -31,11 +31,11 @@ export default function HomePage() {
               </div>
             </h1>
 
-            <p className="text-muted-foreground animate-fade-in-up mx-auto max-w-4xl text-xl leading-relaxed font-light delay-200 sm:text-2xl md:text-3xl">
+            <p className="text-chart-5 animate-fade-in-up mx-auto w-full max-w-4xl text-lg leading-relaxed font-light delay-200 sm:text-2xl">
               {user.bio}
             </p>
 
-            <p className="text-muted-foreground animate-fade-in-up mx-auto max-w-3xl text-base leading-relaxed delay-300 sm:text-lg">
+            <p className="text-muted-foreground animate-fade-in-up mx-auto max-w-2xl leading-relaxed delay-300 sm:text-lg">
               {user.description}
             </p>
 
