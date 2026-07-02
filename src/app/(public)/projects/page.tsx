@@ -1,3 +1,4 @@
+import ProjectCard from "@/components/shared/ProjectCard";
 import Section from "@/components/shared/Section";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,9 +16,9 @@ export default function ProjectsPage() {
       <section>
         {projects.length > 0 ? (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-            {/*{projects.map((project) => (
+            {projects.map((project) => (
               <ProjectCard key={project.slug} project={project} />
-            ))}*/}
+            ))}
           </div>
         ) : (
           <Card className="py-16 overflow-hidden ring-2 ring-primary">

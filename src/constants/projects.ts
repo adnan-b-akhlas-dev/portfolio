@@ -1,1 +1,79 @@
-export const projects = [];
+import { IProject } from "@/interfaces/projects.interfaces";
+
+export const projects: IProject[] = [
+  {
+    slug: "taskflow-project-management",
+    title: "TaskFlow — Project Management App",
+    description:
+      "A collaborative project management tool with real-time task boards, team workspaces, and deadline tracking.",
+    category: "Web App",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS"],
+    thumbnail: "https://picsum.photos/seed/taskflow/800/500",
+    content: null,
+    liveLink: "https://taskflow-demo.vercel.app",
+    clientRepoLink: "https://github.com/yourname/taskflow-client",
+    serverRepoLink: "https://github.com/yourname/taskflow-server",
+    createdAt: "2024-11-02T10:00:00.000Z",
+    updatedAt: "2025-01-15T14:30:00.000Z",
+  },
+  {
+    slug: "shopnest-ecommerce-platform",
+    title: "ShopNest — E-commerce Platform",
+    description:
+      "A full-featured e-commerce platform with product catalog, cart, Stripe checkout, and an admin dashboard for inventory management.",
+    category: "E-commerce",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
+    thumbnail: "https://picsum.photos/seed/shopnest/800/500",
+    content: null,
+    liveLink: "https://shopnest-demo.vercel.app",
+    clientRepoLink: "https://github.com/yourname/shopnest-client",
+    serverRepoLink: "https://github.com/yourname/shopnest-server",
+    createdAt: "2024-08-20T09:15:00.000Z",
+    updatedAt: "2024-12-05T11:00:00.000Z",
+  },
+  {
+    slug: "pulseboard-analytics-dashboard",
+    title: "PulseBoard — Analytics Dashboard",
+    description:
+      "A data visualization dashboard that aggregates API metrics and displays them through interactive charts and reports.",
+    category: "Dashboard",
+    tags: ["React", "TypeScript", "Recharts", "Express", "Redis"],
+    thumbnail: "https://picsum.photos/seed/pulseboard/800/500",
+    content: null,
+    liveLink: "https://pulseboard-demo.vercel.app",
+    clientRepoLink: "https://github.com/yourname/pulseboard-client",
+    serverRepoLink: "https://github.com/yourname/pulseboard-server",
+    createdAt: "2024-05-10T08:45:00.000Z",
+    updatedAt: "2024-09-18T16:20:00.000Z",
+  },
+  {
+    slug: "chatsphere-realtime-messaging",
+    title: "ChatSphere — Real-time Messaging App",
+    description:
+      "A real-time chat application supporting group channels, direct messages, typing indicators, and file sharing.",
+    category: "Web App",
+    tags: ["Next.js", "Socket.io", "Node.js", "MongoDB", "Tailwind CSS"],
+    thumbnail: "https://picsum.photos/seed/chatsphere/800/500",
+    content: null,
+    liveLink: "https://chatsphere-demo.vercel.app",
+    clientRepoLink: "https://github.com/yourname/chatsphere-client",
+    serverRepoLink: "https://github.com/yourname/chatsphere-server",
+    createdAt: "2024-02-14T12:00:00.000Z",
+    updatedAt: "2024-07-01T09:30:00.000Z",
+  },
+  {
+    slug: "devlog-blogging-platform",
+    title: "DevLog — Developer Blogging Platform",
+    description:
+      "A markdown-based blogging platform for developers with syntax highlighting, tag filtering, and SEO optimization.",
+    category: "CMS",
+    tags: ["Next.js", "MDX", "TypeScript", "PostgreSQL", "Prisma"],
+    thumbnail: "https://picsum.photos/seed/devlog/800/500",
+    content: null,
+    liveLink: "https://devlog-demo.vercel.app",
+    clientRepoLink: "https://github.com/yourname/devlog-client",
+    serverRepoLink: "https://github.com/yourname/devlog-server",
+    createdAt: "2023-11-30T07:20:00.000Z",
+    updatedAt: "2024-03-22T13:10:00.000Z",
+  },
+];
