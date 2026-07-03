@@ -49,74 +49,107 @@
 }
 
 :root {
-  /* Catppuccin Latte — Blue accent */ /* base */ /* text */
-  --card: oklch(1 0 0); /* pure white card = clearer separation from base */
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0); /* blue */
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0); /* surface0 */
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0); /* subtext0 */
-  --accent: oklch(0.97 0 0); /* soft blue tint, not sapphire — reads as "primary, muted" */
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325); /* red */
-  --border: oklch(0.922 0 0); /* surface1 */
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0); /* blue */
-  --chart-2: oklch(0.556 0 0); /* sky */
-  --chart-3: oklch(0.439 0 0); /* sapphire */
-  --chart-4: oklch(0.371 0 0); /* lavender */
-  --chart-5: oklch(0.269 0 0); /* mauve */
+  /* --- Catppuccin Latte (Light Mode) --- */
+  --background: #eff1f5; /* Base */
+  --foreground: #4c4f69; /* Text */
+
+  /* Surface containers */
+  --card: #e6e9ef; /* Mantle */
+  --card-foreground: #4c4f69; /* Text */
+
+  --popover: #e6e9ef; /* Mantle */
+  --popover-foreground: #4c4f69; /* Text */
+
+  /* Blue Accent Colors */
+  --primary: #1e66f5; /* Blue */
+  --primary-foreground: #eff1f5; /* Base (for contrast) */
+
+  --secondary: #ccd0da; /* Surface 0 */
+  --secondary-foreground: #4c4f69; /* Text */
+
+  /* Muted and UI borders */
+  --muted: #ccd0da; /* Surface 0 */
+  --muted-foreground: #6c6f85; /* Subtext 1 */
+
+  --accent: #bcc0cc; /* Surface 1 */
+  --accent-foreground: #1e66f5; /* Blue */
+
+  --destructive: #d20f39; /* Red */
+  --destructive-foreground: #eff1f5; /* Base */
+
+  --border: #bcc0cc; /* Surface 1 */
+  --input: #bcc0cc; /* Surface 1 */
+  --ring: #1e66f5; /* Blue */
+
+  /* Latte Palette Charts */
+  --chart-1: #1e66f5; /* Blue */
+  --chart-2: #209fb5; /* Sapphire */
+  --chart-3: #04a5e5; /* Sky */
+  --chart-4: #179299; /* Teal */
+  --chart-5: #40a02b; /* Green */
+
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0); /* mantle */
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+
+  /* Sidebar Component Styling */
+  --sidebar: #dce0e8; /* Crust */
+  --sidebar-foreground: #5c5f77; /* Subtext 0 */
+  --sidebar-primary: #1e66f5; /* Blue */
+  --sidebar-primary-foreground: #eff1f5; /* Base */
+  --sidebar-accent: #ccd0da; /* Surface 0 */
+  --sidebar-accent-foreground: #4c4f69; /* Text */
+  --sidebar-border: #bcc0cc; /* Surface 1 */
+  --sidebar-ring: #1e66f5; /* Blue */
 }
 
 .dark {
-  /* Catppuccin Mocha — Blue accent */
-  --background: oklch(0.145 0 0); /* base */
-  --foreground: oklch(0.985 0 0); /* text */
-  --card: oklch(0.205 0 0); /* slightly warmer/deeper than surface0, less "flat panel" feel */
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0); /* blue */
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0); /* surface0 */
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0); /* overlay2 — a touch dimmer, sits better on dark bg */
-  --accent: oklch(0.269 0 0); /* deep blue tint, not sapphire — visually "quiet primary" */
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216); /* red */
-  --border: oklch(1 0 0 / 10%); /* softer than surface2, less harsh separation */
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0); /* blue */
-  --chart-2: oklch(0.556 0 0); /* sky */
-  --chart-3: oklch(0.439 0 0); /* sapphire */
-  --chart-4: oklch(0.371 0 0); /* lavender */
-  --chart-5: oklch(0.269 0 0); /* mauve */
-  --sidebar: oklch(0.205 0 0); /* mantle */
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* --- Catppuccin Mocha (Dark Mode) --- */
+  --background: #1e1e2e; /* Base */
+  --foreground: #cdd6f4; /* Text */
+
+  /* Surface containers */
+  --card: #181825; /* Mantle */
+  --card-foreground: #cdd6f4; /* Text */
+
+  --popover: #181825; /* Mantle */
+  --popover-foreground: #cdd6f4; /* Text */
+
+  /* Blue Accent Colors */
+  --primary: #89b4fa; /* Blue */
+  --primary-foreground: #11111b; /* Crust (for contrast) */
+
+  --secondary: #313244; /* Surface 0 */
+  --secondary-foreground: #cdd6f4; /* Text */
+
+  /* Muted and UI borders */
+  --muted: #313244; /* Surface 0 */
+  --muted-foreground: #a6adc8; /* Subtext 0 */
+
+  --accent: #45475a; /* Surface 1 */
+  --accent-foreground: #89b4fa; /* Blue */
+
+  --destructive: #f38ba8; /* Red */
+  --destructive-foreground: #11111b; /* Crust */
+
+  --border: #45475a; /* Surface 1 */
+  --input: #45475a; /* Surface 1 */
+  --ring: #89b4fa; /* Blue */
+
+  /* Mocha Palette Charts */
+  --chart-1: #89b4fa; /* Blue */
+  --chart-2: #74c7ec; /* Sapphire */
+  --chart-3: #89dceb; /* Sky */
+  --chart-4: #94e2d5; /* Teal */
+  --chart-5: #a6e3a1; /* Green */
+
+  /* Sidebar Component Styling */
+  --sidebar: #11111b; /* Crust */
+  --sidebar-foreground: #a6adc8; /* Subtext 0 */
+  --sidebar-primary: #89b4fa; /* Blue */
+  --sidebar-primary-foreground: #11111b; /* Crust */
+  --sidebar-accent: #313244; /* Surface 0 */
+  --sidebar-accent-foreground: #cdd6f4; /* Text */
+  --sidebar-border: #45475a; /* Surface 1 */
+  --sidebar-ring: #89b4fa; /* Blue */
 }
 
 @layer base {

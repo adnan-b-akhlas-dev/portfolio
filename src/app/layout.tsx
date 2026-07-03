@@ -4,7 +4,14 @@ import { Cascadia_Code, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { DevelopmentNoticeModal } from "@/components/shared/DevelopmentNoticeModal";
 
-const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-mono",
+  display: "swap",
+  fallback: ["ui-monospace", "monospace"],
+});
 
 const cascadiaCode = Cascadia_Code({
   subsets: ["latin"],
@@ -12,6 +19,7 @@ const cascadiaCode = Cascadia_Code({
   style: ["normal", "italic"],
   variable: "--font-serif",
   display: "swap",
+  fallback: ["ui-monospace", "monospace"],
 });
 
 export const metadata: Metadata = {
