@@ -68,10 +68,10 @@ export default async function ProjectCard({ project }: IProps) {
 
         {/* Links */}
         <CardFooter className="flex-col gap-6">
-          <div className="mt-2 flex w-full items-center justify-around gap-4">
+          <div className="mt-2 flex w-full items-center justify-between gap-4">
             {liveLink && (
               <Button
-                className="hover:border-primary text-primary hover:text-primary h-fit gap-1 border-b border-transparent p-0! pb-0.5! hover:bg-transparent!"
+                className="border-b-transparent! hover:border-b-primary! border-b! text-primary hover:text-primary p-0! pb-0.5! h-fit rounded-none!"
                 asChild
                 variant={"ghost"}
               >
@@ -82,7 +82,7 @@ export default async function ProjectCard({ project }: IProps) {
             )}
             {clientRepoLink && (
               <Button
-                className="hover:border-primary text-primary hover:text-primary h-fit gap-1 border-b border-transparent p-0! pb-0.5! hover:bg-transparent!"
+                className="border-b-transparent! hover:border-b-primary! border-b! text-primary hover:text-primary p-0! pb-0.5! h-fit rounded-none!"
                 asChild
                 variant={"ghost"}
               >
@@ -97,7 +97,7 @@ export default async function ProjectCard({ project }: IProps) {
             )}
             {serverRepoLink && (
               <Button
-                className="hover:border-primary text-primary hover:text-primary h-fit gap-1 border-b border-transparent p-0! pb-0.5! hover:bg-transparent!"
+                className="border-b-transparent! hover:border-b-primary! border-b! text-primary hover:text-primary p-0! pb-0.5! h-fit rounded-none!"
                 asChild
                 variant={"ghost"}
               >
