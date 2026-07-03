@@ -2,10 +2,11 @@ import BackButton from "@/components/shared/BackButton";
 import NavigateButton from "@/components/shared/NavigateButton";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  ArrowUUpLeftIcon,
-  HouseLineIcon,
-  WarningOctagonIcon,
-} from "@phosphor-icons/react/dist/ssr";
+  AlertCircleIcon,
+  ArrowTurnBackwardIcon,
+  Home03Icon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 
 export default function NotFound() {
   return (
@@ -16,10 +17,7 @@ export default function NotFound() {
             <div className="relative">
               <div className="bg-destructive/10 absolute inset-0 rounded-full blur-2xl" />
               <div className="bg-muted relative rounded-2xl p-6">
-                <WarningOctagonIcon
-                  className="text-destructive h-16 w-16"
-                  strokeWidth={1.5}
-                />
+                <HugeiconsIcon icon={AlertCircleIcon} />
               </div>
             </div>
 
@@ -45,7 +43,7 @@ export default function NotFound() {
                 size="lg"
                 className="cursor-pointer px-8 py-6 text-sm"
               >
-                <HouseLineIcon className="mr-2 h-5! w-5!" />
+                <HugeiconsIcon icon={Home03Icon} />
                 Go Home
               </NavigateButton>
               <BackButton
@@ -53,7 +51,7 @@ export default function NotFound() {
                 size="lg"
                 className="cursor-pointer px-8 py-6 text-sm"
               >
-                <ArrowUUpLeftIcon className="mr-2 h-5! w-5!" />
+                <HugeiconsIcon icon={ArrowTurnBackwardIcon} />
                 Go Back
               </BackButton>
             </div>

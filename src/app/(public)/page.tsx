@@ -1,10 +1,8 @@
 import Section from "@/components/shared/Section";
 import { Button } from "@/components/ui/button";
 import { user } from "@/constants/user";
-import {
-  ArrowLineRightIcon,
-  SparkleIcon,
-} from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight03Icon, SparklesIcon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -18,7 +16,7 @@ export default function HomePage() {
           <div className="bg-chart-4/20 absolute right-0 -bottom-10 h-96 w-96 animate-pulse rounded-full blur-3xl delay-1000" />
           <div className="relative mx-auto space-y-4 text-center">
             <div className="bg-muted/50 border-border text-foreground animate-fade-in hover:text-primary inline-flex cursor-default items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium backdrop-blur-sm transition-all duration-300 hover:scale-105">
-              <SparkleIcon className="h-5 w-5" />
+              <HugeiconsIcon icon={SparklesIcon} />
               <span>Available for new opportunities</span>
             </div>
 
@@ -47,7 +45,7 @@ export default function HomePage() {
               >
                 <Link href="/projects">
                   View My Projects
-                  <ArrowLineRightIcon className="h-5! w-5! transition-transform group-hover:translate-x-1" />
+                  <HugeiconsIcon icon={ArrowRight03Icon} />
                 </Link>
               </Button>
 

@@ -1,12 +1,12 @@
 import LogoIcon from "@/components/icons/LogoIcon";
 import {
-  BooksIcon,
-  BracketsCurlyIcon,
-  BriefcaseIcon,
-  FoldersIcon,
-  PhoneIcon,
-  UserCircleIcon,
-} from "@phosphor-icons/react/dist/ssr";
+  Briefcase01Icon,
+  Call02Icon,
+  FolderCodeIcon,
+  LibraryIcon,
+  ThirdBracketIcon,
+  UserCircle02Icon,
+} from "@hugeicons/core-free-icons";
 
 export const navLinks = [
   {
@@ -17,31 +17,31 @@ export const navLinks = [
   {
     label: "About",
     href: "/about",
-    icon: UserCircleIcon,
+    icon: UserCircle02Icon,
   },
   {
     label: "Projects",
     href: "/projects",
-    icon: FoldersIcon,
+    icon: FolderCodeIcon,
   },
   {
     label: "Experiences",
     href: "/experiences",
-    icon: BriefcaseIcon,
+    icon: Briefcase01Icon,
   },
   {
     label: "Skills",
     href: "/skills",
-    icon: BracketsCurlyIcon,
+    icon: ThirdBracketIcon,
   },
   {
     label: "Blogs",
     href: "/blogs",
-    icon: BooksIcon,
+    icon: LibraryIcon,
   },
   {
     label: "Contact",
     href: "/contact",
-    icon: PhoneIcon,
+    icon: Call02Icon,
   },
 ];

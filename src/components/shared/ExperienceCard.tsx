@@ -1,15 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { format } from "date-fns";
-import {
-  ArrowRightIcon,
-  BriefcaseIcon,
-  CalendarDotsIcon,
-  CertificateIcon,
-  CodeSimpleIcon,
-  MapPinAreaIcon,
-} from "@phosphor-icons/react/dist/ssr";
 import { IExperience } from "@/interfaces/experience.interface";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+  ArrowRightBigIcon,
+  Briefcase01Icon,
+  CalendarsIcon,
+  Certificate01Icon,
+  CodeIcon,
+  MapPinCheckIcon,
+} from "@hugeicons/core-free-icons";
 
 interface IProps {
   experience: IExperience;
@@ -31,19 +32,19 @@ export default function ExperienceCard({ experience }: IProps) {
               </h3>
               <div className="flex flex-col gap-2">
                 <div className="text-primary flex items-center gap-2">
-                  <BriefcaseIcon className="h-5! w-5!" />
+                  <HugeiconsIcon icon={Briefcase01Icon} />
                   <span className="text-lg font-semibold">
                     {experience.company}
                   </span>
                 </div>
                 <div className="text-chart-5 flex items-center gap-2 text-sm">
-                  <MapPinAreaIcon className="h-5! w-5!" />
+                  <HugeiconsIcon icon={MapPinCheckIcon} />
                   <span>{experience.location}</span>
                 </div>
               </div>
             </div>
             <Badge className="flex w-fit items-center gap-1">
-              <CalendarDotsIcon className="h-3 w-3" />
+              <HugeiconsIcon icon={CalendarsIcon} />
               {format(experience.startDate, "MMM yyyy")} -{" "}
               {experience?.endDate
                 ? format(experience?.endDate, "MMM yyyy")
@@ -57,7 +58,7 @@ export default function ExperienceCard({ experience }: IProps) {
 
           <div className="mb-4">
             <div className="mb-3 flex items-center gap-2">
-              <CertificateIcon className="h-5! w-5!" />
+              <HugeiconsIcon icon={Certificate01Icon} />
               <span className="text-lg font-semibold">Key Achievements</span>
             </div>
             <ul className="space-y-3">
@@ -67,7 +68,7 @@ export default function ExperienceCard({ experience }: IProps) {
                   className="text-muted-foreground flex items-start gap-2 align-top text-sm transition-all duration-300"
                 >
                   <span>
-                    <ArrowRightIcon className="text-primary h-5! w-5!" />
+                    <HugeiconsIcon icon={ArrowRightBigIcon} />
                   </span>
                   {achievement}
                 </li>
@@ -77,7 +78,7 @@ export default function ExperienceCard({ experience }: IProps) {
 
           <div className="max-w-xl">
             <div className="mb-3 flex items-center gap-2">
-              <CodeSimpleIcon className="h-5! w-5!" />
+              <HugeiconsIcon icon={CodeIcon} />
               <span className="text-lg font-semibold">Technologies</span>
             </div>
             <div className="flex flex-wrap gap-2">

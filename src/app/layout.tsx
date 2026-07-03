@@ -4,13 +4,7 @@ import { Cascadia_Code, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { DevelopmentNoticeModal } from "@/components/shared/DevelopmentNoticeModal";
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-mono",
-  display: "swap",
-});
+const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
 
 const cascadiaCode = Cascadia_Code({
   subsets: ["latin"],

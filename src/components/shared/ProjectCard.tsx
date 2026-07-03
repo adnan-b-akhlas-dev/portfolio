@@ -9,10 +9,11 @@ import {
 } from "@/components/ui/card";
 import { IProject } from "@/interfaces/projects.interfaces";
 import {
-  GlobeIcon,
-  MonitorIcon,
-  TerminalWindowIcon,
-} from "@phosphor-icons/react/dist/ssr";
+  Globe02Icon,
+  MonitorDotIcon,
+  ServerStack01Icon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -75,7 +76,7 @@ export default async function ProjectCard({ project }: IProps) {
                 variant={"ghost"}
               >
                 <a href={liveLink} target="_blank" rel="noopener noreferrer">
-                  <GlobeIcon className="h-5! w-5!" /> Live
+                  <HugeiconsIcon icon={Globe02Icon} /> Live
                 </a>
               </Button>
             )}
@@ -90,7 +91,7 @@ export default async function ProjectCard({ project }: IProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <MonitorIcon className="h-5! w-5!" /> Client
+                  <HugeiconsIcon icon={MonitorDotIcon} /> Client
                 </a>
               </Button>
             )}
@@ -105,7 +106,7 @@ export default async function ProjectCard({ project }: IProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <TerminalWindowIcon className="h-5! w-5!" /> Server
+                  <HugeiconsIcon icon={ServerStack01Icon} /> Server
                 </a>
               </Button>
             )}

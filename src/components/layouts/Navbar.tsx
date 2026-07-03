@@ -9,13 +9,15 @@ import {
 import { navLinks } from "@/constants/navlinks";
 import { cn } from "@/lib/utils";
 import {
-  DotsThreeOutlineVerticalIcon,
-  LayoutIcon,
-  XIcon,
-} from "@phosphor-icons/react/dist/ssr";
+  Cancel01Icon,
+  DashboardSquare02Icon,
+  Menu04Icon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon, IconSvgElement } from "@hugeicons/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import LogoIcon from "@/components/icons/LogoIcon";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,9 +33,9 @@ export default function Navbar() {
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? (
-          <XIcon className="h-5 w-5" />
+          <HugeiconsIcon icon={Cancel01Icon} />
         ) : (
-          <DotsThreeOutlineVerticalIcon className="h-5 w-5" />
+          <HugeiconsIcon icon={Menu04Icon} />
         )}
       </Button>
 
@@ -47,7 +49,7 @@ export default function Navbar() {
         >
           <div className="bg-background/80 border-border flex rounded-xl flex-col gap-3 border p-3 shadow-2xl backdrop-blur-md transition-all duration-300">
             {navLinks.map((item, index) => {
-              const Icon = item.icon;
+              const Icon = item.icon as IconSvgElement;
               return (
                 <Tooltip key={index}>
                   <TooltipTrigger asChild>
@@ -65,7 +67,11 @@ export default function Navbar() {
                       aria-label={item.label}
                     >
                       <Link href={item.href}>
-                        <Icon className="h-6! w-6!" />
+                        {item.label === "Home" ? (
+                          <LogoIcon />
+                        ) : (
+                          <HugeiconsIcon icon={Icon} />
+                        )}
                       </Link>
                     </Button>
                   </TooltipTrigger>
@@ -87,7 +93,7 @@ export default function Navbar() {
                     aria-label="Dashboard"
                   >
                     <Link href="/admin">
-                      <LayoutIcon className="h-6! w-6!" />
+                      <HugeiconsIcon icon={DashboardSquare02Icon} />
                     </Link>
                   </Button>
                 </TooltipTrigger>

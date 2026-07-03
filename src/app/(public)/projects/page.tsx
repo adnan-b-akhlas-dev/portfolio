@@ -3,7 +3,8 @@ import Section from "@/components/shared/Section";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
 import { projects } from "@/constants/projects";
-import { FolderOpenIcon, SparkleIcon } from "@phosphor-icons/react/dist/ssr";
+import { CodeFolderIcon, SparklesIcon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 
 export default function ProjectsPage() {
   return (
@@ -27,16 +28,8 @@ export default function ProjectsPage() {
                 <div className="relative inline-block">
                   <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full" />
                   <div className="relative bg-linear-to-br from-primary/10 to-primary/5 border border-primary/10 rounded-2xl p-5 mx-auto w-fit">
-                    <FolderOpenIcon
-                      className="text-primary"
-                      size={40}
-                      weight="light"
-                    />
-                    <SparkleIcon
-                      className="text-primary/60 absolute -top-1 -right-1 animate-pulse"
-                      size={16}
-                      weight="fill"
-                    />
+                    <HugeiconsIcon icon={CodeFolderIcon} />
+                    <HugeiconsIcon icon={SparklesIcon} />
                   </div>
                 </div>
                 <p className="text-foreground mt-6 text-2xl font-semibold tracking-tight">

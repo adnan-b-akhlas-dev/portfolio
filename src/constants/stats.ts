@@ -1,23 +1,23 @@
 import {
-  BooksIcon,
-  BriefcaseIcon,
-  FoldersIcon,
-} from "@phosphor-icons/react/dist/ssr";
+  Briefcase01Icon,
+  CodeFolderIcon,
+  LibraryIcon,
+} from "@hugeicons/core-free-icons";
 
 export const stats = [
   {
     label: "Blogs",
     count: 4,
-    icon: BooksIcon,
+    icon: LibraryIcon,
   },
   {
     label: "Projects",
     count: 4,
-    icon: FoldersIcon,
+    icon: CodeFolderIcon,
   },
   {
     label: "Experience",
     count: 4,
-    icon: BriefcaseIcon,
+    icon: Briefcase01Icon,
   },
 ];

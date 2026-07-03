@@ -3,6 +3,7 @@ import SectionTitle from "@/components/shared/SectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
 import { stats } from "@/constants/stats";
 import { user } from "@/constants/user";
+import { HugeiconsIcon } from "@hugeicons/react";
 import Image from "next/image";
 
 export default function AboutPage() {
@@ -47,7 +48,7 @@ export default function AboutPage() {
 
       {/* Stats */}
       <div className="col-span-2 mt-8 grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {stats.map(({ label, count, icon: Icon }) => (
+        {stats.map(({ label, count, icon }) => (
           <div key={label} className="relative overflow-hidden rounded-xl">
             {/* Top-left gradient */}
             <div className="from-primary/20 absolute top-16 -left-32 h-100 w-100 rounded-full bg-linear-to-br to-transparent blur-2xl" />
@@ -61,7 +62,7 @@ export default function AboutPage() {
                 {/* icon */}
                 <div className="mb-3 flex justify-center">
                   <div className="bg-primary/10 group-hover:bg-primary/20 flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-300">
-                    <Icon className="text-primary h-7 w-7 transition-transform duration-300 group-hover:scale-110" />
+                    <HugeiconsIcon icon={icon} />
                   </div>
                 </div>
 

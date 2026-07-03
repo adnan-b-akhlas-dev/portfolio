@@ -6,10 +6,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { experiences } from "@/constants/experiences";
 import { user } from "@/constants/user";
 import {
-  BriefcaseIcon,
-  FileTextIcon,
-  SparkleIcon,
-} from "@phosphor-icons/react/dist/ssr";
+  Briefcase01Icon,
+  File02Icon,
+  SparklesIcon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
 
 export default function ExperiencesPage() {
@@ -28,7 +29,7 @@ export default function ExperiencesPage() {
               target="_blank"
               className="flex items-center gap-2"
             >
-              <FileTextIcon />
+              <HugeiconsIcon icon={File02Icon} />
               View Resume
             </Link>
           </Button>
@@ -52,16 +53,8 @@ export default function ExperiencesPage() {
                   <div className="relative inline-block">
                     <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full" />
                     <div className="relative bg-linear-to-br from-primary/10 to-primary/5 border border-primary/10 rounded-2xl p-5 mx-auto w-fit">
-                      <BriefcaseIcon
-                        className="text-primary"
-                        size={40}
-                        weight="light"
-                      />
-                      <SparkleIcon
-                        className="text-primary/60 absolute -top-1 -right-1 animate-pulse"
-                        size={16}
-                        weight="fill"
-                      />
+                      <HugeiconsIcon icon={Briefcase01Icon} />
+                      <HugeiconsIcon icon={SparklesIcon} />
                     </div>
                   </div>
                   <p className="text-foreground mt-6 text-2xl font-semibold tracking-tight">
