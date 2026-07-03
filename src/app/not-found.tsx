@@ -17,7 +17,10 @@ export default function NotFound() {
             <div className="relative">
               <div className="bg-destructive/10 absolute inset-0 rounded-full blur-2xl" />
               <div className="bg-muted relative rounded-2xl p-6">
-                <HugeiconsIcon icon={AlertCircleIcon} />
+                <HugeiconsIcon
+                  icon={AlertCircleIcon}
+                  className="w-12! h-12! text-destructive"
+                />
               </div>
             </div>
 
@@ -41,7 +44,7 @@ export default function NotFound() {
                 navigation="/"
                 variant="default"
                 size="lg"
-                className="cursor-pointer px-8 py-6 text-sm"
+                className="cursor-pointer px-8 py-6"
               >
                 <HugeiconsIcon icon={Home03Icon} />
                 Go Home
@@ -49,7 +52,7 @@ export default function NotFound() {
               <BackButton
                 variant="secondary"
                 size="lg"
-                className="cursor-pointer px-8 py-6 text-sm"
+                className="cursor-pointer px-8 py-6"
               >
                 <HugeiconsIcon icon={ArrowTurnBackwardIcon} />
                 Go Back

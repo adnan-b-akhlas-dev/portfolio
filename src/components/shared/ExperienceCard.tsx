@@ -65,7 +65,7 @@ export default function ExperienceCard({ experience }: IProps) {
               {experience.achievement.map((achievement, idx) => (
                 <li
                   key={idx}
-                  className="text-muted-foreground flex items-start gap-2 align-top text-sm transition-all duration-300"
+                  className="text-muted-foreground hover:text-foreground flex items-start gap-2 align-top text-sm transition-all duration-300"
                 >
                   <span>
                     <HugeiconsIcon icon={ArrowRightBigIcon} />
@@ -83,7 +83,13 @@ export default function ExperienceCard({ experience }: IProps) {
             </div>
             <div className="flex flex-wrap gap-2">
               {experience.tags.map((tech) => (
-                <Badge key={tech}>{tech}</Badge>
+                <Badge
+                  key={tech}
+                  variant="secondary"
+                  className="text-muted-foreground hover:text-foreground hover:border-primary/40 border border-transparent font-medium transition-colors"
+                >
+                  {tech}
+                </Badge>
               ))}
             </div>
           </div>

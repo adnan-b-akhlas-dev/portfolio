@@ -1,7 +1,4 @@
-import Link from "next/link";
-
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 import {
@@ -10,6 +7,7 @@ import {
   SparklesIcon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
+import NavigateButton from "./NavigateButton";
 
 interface IProps {
   title?: string;
@@ -53,12 +51,15 @@ export default function ComingSoon({
             {description}
           </p>
 
-          <Button asChild variant="outline" size="lg" className="mt-10 gap-2">
-            <Link href="/">
-              <HugeiconsIcon icon={ArrowLeft01Icon} size={18} />
-              Back to Home
-            </Link>
-          </Button>
+          <NavigateButton
+            navigation="/"
+            size="lg"
+            variant="secondary"
+            className="mt-10 gap-2 cursor-pointer px-8 py-6"
+          >
+            <HugeiconsIcon icon={ArrowLeft01Icon} size={18} />
+            Back to Home
+          </NavigateButton>
         </CardContent>
       </Card>
     </section>

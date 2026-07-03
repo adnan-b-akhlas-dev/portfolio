@@ -68,9 +68,9 @@ export default function Navbar() {
                     >
                       <Link href={item.href}>
                         {item.label === "Home" ? (
-                          <LogoIcon />
+                          <LogoIcon className="w-6! h-6!" />
                         ) : (
-                          <HugeiconsIcon icon={Icon} />
+                          <HugeiconsIcon className="w-6! h-6!" icon={Icon} />
                         )}
                       </Link>
                     </Button>
@@ -93,7 +93,10 @@ export default function Navbar() {
                     aria-label="Dashboard"
                   >
                     <Link href="/admin">
-                      <HugeiconsIcon icon={DashboardSquare02Icon} />
+                      <HugeiconsIcon
+                        className="w-6! h-6!"
+                        icon={DashboardSquare02Icon}
+                      />
                     </Link>
                   </Button>
                 </TooltipTrigger>

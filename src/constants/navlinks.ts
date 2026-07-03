@@ -1,10 +1,10 @@
 import LogoIcon from "@/components/icons/LogoIcon";
 import {
+  Brain02Icon,
   Briefcase01Icon,
   Call02Icon,
   FolderCodeIcon,
   LibraryIcon,
-  ThirdBracketIcon,
   UserCircle02Icon,
 } from "@hugeicons/core-free-icons";
 
@@ -32,7 +32,7 @@ export const navLinks = [
   {
     label: "Skills",
     href: "/skills",
-    icon: ThirdBracketIcon,
+    icon: Brain02Icon,
   },
   {
     label: "Blogs",

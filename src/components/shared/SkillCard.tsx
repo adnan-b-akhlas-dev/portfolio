@@ -11,6 +11,7 @@ interface IProps {
 // are mapped here rather than interpolated (e.g. `from-${color}/25`).
 const ORB_CLASSES: Record<ISkill["color"], string> = {
   primary: "from-primary/25",
+  "chart-1": "from-chart-1/25",
   "chart-2": "from-chart-2/25",
   "chart-3": "from-chart-3/25",
   "chart-4": "from-chart-4/25",
@@ -19,6 +20,7 @@ const ORB_CLASSES: Record<ISkill["color"], string> = {
 
 const ICON_BOX_CLASSES: Record<ISkill["color"], string> = {
   primary: "bg-primary/10 border-primary/20 text-primary",
+  "chart-1": "bg-chart-1/10 border-chart-1/20 text-chart-1",
   "chart-2": "bg-chart-2/10 border-chart-2/20 text-chart-2",
   "chart-3": "bg-chart-3/10 border-chart-3/20 text-chart-3",
   "chart-4": "bg-chart-4/10 border-chart-4/20 text-chart-4",

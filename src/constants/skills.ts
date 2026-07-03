@@ -1,5 +1,6 @@
 import { ISkill } from "@/interfaces/skills.interface";
 import {
+  Brain02Icon,
   CloudServerIcon,
   Database01Icon,
   MonitorDotIcon,
@@ -49,5 +50,19 @@ export const skills: ISkill[] = [
     icon: ToolsIcon,
     color: "chart-5",
     skills: ["Git", "VS Code", "Postman", "Figma", "Jest", "Webpack"],
+  },
+  {
+    id: "soft-skills",
+    title: "Soft Skills",
+    icon: Brain02Icon,
+    color: "chart-1",
+    skills: [
+      "Problem Solving",
+      "Communication",
+      "Team Collaboration",
+      "Critical Thinking",
+      "Time Management",
+      "Adaptability",
+    ],
   },
 ];
