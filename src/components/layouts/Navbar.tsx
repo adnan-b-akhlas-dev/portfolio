@@ -1,4 +1,6 @@
 "use client";
+
+import LogoIcon from "@/components/icons/LogoIcon";
 import { Button } from "@/components/ui/button";
 import {
   Tooltip,
@@ -17,7 +19,7 @@ import { HugeiconsIcon, IconSvgElement } from "@hugeicons/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import LogoIcon from "@/components/icons/LogoIcon";
+import ModeToggle from "@/components/buttons/ModeToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,6 +84,10 @@ export default function Navbar() {
               );
             })}
 
+            {/* Theme Toggle */}
+            <ModeToggle setIsOpen={setIsOpen} />
+
+            {/* Admin Dashboard */}
             {admin && (
               <Tooltip>
                 <TooltipTrigger asChild>
