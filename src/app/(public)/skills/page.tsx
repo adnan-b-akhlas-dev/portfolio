@@ -1,6 +1,6 @@
 import Section from "@/components/shared/Section";
 import SectionTitle from "@/components/shared/SectionTitle";
-import SkillCard from "@/components/shared/SkillCard";
+import SkillCard from "@/components/cards/SkillCard";
 import { skills } from "@/constants/skills";
 
 export default function SkillsPage() {

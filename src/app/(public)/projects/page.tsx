@@ -1,4 +1,4 @@
-import ProjectCard from "@/components/shared/ProjectCard";
+import ProjectCard from "@/components/cards/ProjectCard";
 import Section from "@/components/shared/Section";
 import SectionTitle from "@/components/shared/SectionTitle";
 import ViewResume from "@/components/buttons/ViewResumeButton";

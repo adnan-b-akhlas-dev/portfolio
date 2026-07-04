@@ -1,4 +1,4 @@
-import ExperienceCard from "@/components/shared/ExperienceCard";
+import ExperienceCard from "@/components/cards/ExperienceCard";
 import Section from "@/components/shared/Section";
 import SectionTitle from "@/components/shared/SectionTitle";
 import ViewResume from "@/components/buttons/ViewResumeButton";
