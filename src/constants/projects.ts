@@ -77,3 +77,53 @@ export const projects: IProject[] = [
     updatedAt: "2024-03-22T13:10:00.000Z",
   },
 ];
+
+export const dummyProject: IProjectDemo = {
+  id: "1",
+  title: "Fintech Dashboard Redesign",
+  description:
+    "A complete overhaul of a legacy financial dashboard, focused on clarity, speed, and trust.",
+  thumbnail: "https://picsum.photos/id/180/1200/675",
+  content: `
+    <p>Northbridge Capital came to us with a dashboard that analysts had learned to
+    tolerate rather than enjoy. It worked, but every workflow took more clicks and
+    more squinting than it should have.</p>
+    <p>Our job was to rebuild the experience around how analysts actually think:
+    fast comparisons, clear hierarchies, and numbers that are trustworthy at a
+    glance. We rebuilt the front end from scratch while keeping the existing data
+    pipeline intact, so the migration could happen without disrupting daily
+    trading operations.</p>
+    <p>The result is a dashboard the team now opens first thing every morning,
+    instead of the one they used to dread.</p>
+  `,
+  client: "Northbridge Capital",
+  role: "Lead Product Designer & Frontend Engineer",
+  duration: "Jan 2026 – Apr 2026 (4 months)",
+  category: "Fintech · Web App",
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "shadcn/ui",
+    "PostgreSQL",
+    "Prisma",
+  ],
+  liveUrl: "https://example.com",
+  githubUrl: "https://github.com/example/fintech-dashboard",
+  challenge:
+    "The existing dashboard had grown organically over five years with no consistent design system. Analysts relied on tribal knowledge to find key reports, and loading a single portfolio view could take up to 8 seconds.",
+  solution:
+    "We ran a two-week discovery sprint shadowing analysts, then rebuilt the information architecture around three core workflows. A new component library and virtualized data tables cut load times dramatically while giving the product room to grow.",
+  results: [
+    "Reduced average task completion time by 42%",
+    "Cut onboarding time for new analysts from 3 weeks to 4 days",
+    "Increased daily active usage by 68% within the first quarter",
+    "Zero critical bugs reported in the first 90 days post-launch",
+  ],
+  images: [
+    "https://picsum.photos/id/1/1200/675",
+    "https://picsum.photos/id/20/1200/675",
+    "https://picsum.photos/id/48/1200/675",
+    "https://picsum.photos/id/60/1200/675",
+  ],
+};
