@@ -162,4 +162,11 @@
   html {
     @apply font-mono;
   }
+  html {
+    scrollbar-width: none; /* Firefox */
+  }
+
+  html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
 }
