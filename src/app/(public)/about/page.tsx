@@ -17,15 +17,14 @@ export default function AboutPage() {
       <div className="grid items-start gap-8 lg:grid-cols-2">
         <div className="flex justify-between lg:justify-end">
           <div className="group relative grow">
-            <Card className="overflow-hidden p-0 lg:w-md 2xl:w-xl">
-              <CardContent className="aspect-square overflow-hidden p-0">
+            <Card className="overflow-hidden p-0 lg:w-md 2xl:w-xl border-2 border-primary!">
+              <CardContent className="aspect-square overflow-hidden p-0 relative">
                 <Image
                   src={user.image}
                   alt={user.name}
-                  width={768}
-                  height={768}
                   loading="eager"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1400px) 50vw, 33vw"
                   className="rounded-lg object-cover object-[25%_100%]"
                 />
               </CardContent>

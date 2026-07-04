@@ -26,7 +26,7 @@ export default function HomePage() {
               <div
                 className={`from-primary to-chart-4 bg-linear-to-r bg-clip-text text-transparent`}
               >
-                <strong className="font-serif italic">{user.name}</strong>
+                <strong className="italic">{user.name}</strong>
               </div>
             </h1>
 
@@ -51,7 +51,7 @@ export default function HomePage() {
               </Button>
               <ViewResume
                 size="lg"
-                variant="outline"
+                variant="secondary"
                 className="static! px-8 py-6 font-medium rounded-lg transition-all duration-300"
               />
             </div>
