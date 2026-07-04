@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Cascadia_Code, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { DevelopmentNoticeModal } from "@/components/shared/DevelopmentNoticeModal";
+import { Toaster } from "@/components/ui/sonner";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -46,6 +47,33 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {children}
+        <Toaster
+          position="top-right"
+          richColors
+          closeButton
+          duration={5000}
+          toastOptions={{
+            classNames: {
+              toast:
+                "!group !flex !items-start !gap-3 !rounded-lg !border !border-border !bg-background !text-foreground !shadow-lg",
+              content: "!flex-1",
+              title: "!font-medium !text-foreground",
+              description: "!text-sm !text-muted-foreground",
+              closeButton:
+                "!absolute !-right-1 !top-3 !left-auto !h-6 !w-6 !rounded-md !border !border-border !bg-background !text-muted-foreground hover:!bg-accent hover:!text-accent-foreground",
+              icon: "!size-5 !shrink-0 !rounded-full !p-0.5 !border",
+              success:
+                "!border-primary/20 !bg-primary/10 !text-foreground [&_.sonner-icon]:!border-primary/30 [&_.sonner-icon]:!bg-primary/15 [&_.sonner-icon]:!text-primary",
+              error:
+                "!border-destructive/20 !bg-destructive/10 !text-foreground [&_.sonner-icon]:!border-destructive/30 [&_.sonner-icon]:!bg-destructive/15 [&_.sonner-icon]:!text-destructive",
+              warning:
+                "!border-yellow-500/20 !bg-yellow-500/10 !text-foreground [&_.sonner-icon]:!border-yellow-500/30 [&_.sonner-icon]:!bg-yellow-500/15 [&_.sonner-icon]:!text-yellow-600 dark:[&_.sonner-icon]:!text-yellow-400",
+              info: "!border-secondary !bg-secondary !text-secondary-foreground [&_.sonner-icon]:!border-border [&_.sonner-icon]:!bg-background [&_.sonner-icon]:!text-secondary-foreground",
+              loading:
+                "!border-muted !bg-muted !text-foreground [&_.sonner-icon]:!border-border [&_.sonner-icon]:!bg-background [&_.sonner-icon]:!text-muted-foreground",
+            },
+          }}
+        />
         <DevelopmentNoticeModal />
       </body>
     </html>
