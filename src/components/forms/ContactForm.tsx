@@ -17,6 +17,7 @@ import { handleKeyPress } from "@/helpers/handleKeyPress";
 import { Loading03Icon, SentIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { toast } from "sonner";
+import { sendContactEmail } from "@/actions/contact";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -48,19 +49,15 @@ export default function ContactForm() {
 
   const onSubmit = async (values: TContact) => {
     const toastId = toast.loading("Sending your message…");
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      toast.success("Thanks! Your message has been sent successfully.", {
-        id: toastId,
-      });
-      // eslint-disable-next-line no-console
-      console.log(values);
-    } catch (error) {
-      toast.error("Oops! Something went wrong. Please try again.", {
-        id: toastId,
-      });
-      console.error(error);
+    const result = await sendContactEmail(values);
+
+    if (!result.success) {
+      console.error(values);
+      toast.error(result.message, { id: toastId });
     }
+
+    form.reset();
+    toast.success(result.message, { id: toastId });
   };
 
   return (
