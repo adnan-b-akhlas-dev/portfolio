@@ -9,6 +9,7 @@
     "lint": "eslint",
     "prepare": "husky"
   },
+  "type": "module",
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",
     "@hugeicons/core-free-icons": "^4.2.2",
