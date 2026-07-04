@@ -45,7 +45,7 @@ export default function RootLayout({
         jetbrainsMono.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-screen bg-[url('/dots.svg')] bg-cover bg-fixed bg-center">
         {children}
         <Toaster
           position="top-right"
