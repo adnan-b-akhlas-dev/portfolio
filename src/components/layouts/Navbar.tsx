@@ -28,7 +28,7 @@ export default function Navbar() {
       <Button
         size="icon"
         variant="secondary"
-        className="bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground fixed top-6 right-6 z-50 shadow-lg lg:hidden"
+        className="bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground fixed top-6 right-6 z-50 shadow-lg xl:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? (
@@ -43,7 +43,7 @@ export default function Navbar() {
           className={`fixed top-1/2 left-6 z-40 -translate-y-1/2 transition-all duration-300 ease-in-out ${
             isOpen
               ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0 lg:translate-x-0 lg:opacity-100"
+              : "-translate-x-full opacity-0 lg:translate-x-0 xl:opacity-100"
           } `}
         >
           <div className="bg-background/80 border-border flex rounded-xl flex-col gap-3 border p-3 shadow-2xl backdrop-blur-md transition-all duration-300">
@@ -92,7 +92,7 @@ export default function Navbar() {
 
       {isOpen && (
         <div
-          className="bg-background/80 fixed inset-0 z-30 backdrop-blur-sm md:hidden"
+          className="bg-background/80 fixed inset-0 z-30 backdrop-blur-sm xl:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}

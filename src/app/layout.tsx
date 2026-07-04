@@ -1,25 +1,16 @@
-import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
-import { Cascadia_Code, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
 import { DevelopmentNoticeModal } from "@/components/shared/DevelopmentNoticeModal";
 import { Toaster } from "@/components/ui/sonner";
+import { cn } from "@/lib/utils";
 import ThemeProvider from "@/providers/ThemeProvider";
+import type { Metadata } from "next";
+import { Victor_Mono } from "next/font/google";
+import "./globals.css";
 
-const jetbrainsMono = JetBrains_Mono({
+const victorMono = Victor_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
-  variable: "--font-mono",
-  display: "swap",
-  fallback: ["ui-monospace", "monospace"],
-});
-
-const cascadiaCode = Cascadia_Code({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-serif",
+  variable: "--font-victor",
   display: "swap",
   fallback: ["ui-monospace", "monospace"],
 });
@@ -42,9 +33,8 @@ export default function RootLayout({
         "dark",
         "h-full",
         "antialiased",
-        "font-mono",
-        cascadiaCode.variable,
-        jetbrainsMono.variable,
+        "font-victor",
+        victorMono.variable,
       )}
     >
       <body className="min-h-screen bg-[url('/dots.svg')] bg-cover bg-fixed bg-center">
