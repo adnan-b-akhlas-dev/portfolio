@@ -17,14 +17,7 @@ interface IProps {
     | null
     | undefined;
   size?:
-    | "default"
-    | "sm"
-    | "lg"
-    | "icon"
-    | "icon-sm"
-    | "icon-lg"
-    | null
-    | undefined;
+    "default" | "sm" | "lg" | "icon" | "icon-sm" | "icon-lg" | null | undefined;
 }
 
 export default function NavigateButton({

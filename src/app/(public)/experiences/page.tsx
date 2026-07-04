@@ -1,17 +1,11 @@
 import ExperienceCard from "@/components/shared/ExperienceCard";
 import Section from "@/components/shared/Section";
 import SectionTitle from "@/components/shared/SectionTitle";
-import { Button } from "@/components/ui/button";
+import ViewResume from "@/components/shared/ViewResumeButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { experiences } from "@/constants/experiences";
-import { user } from "@/constants/user";
-import {
-  Briefcase01Icon,
-  File02Icon,
-  SparklesIcon,
-} from "@hugeicons/core-free-icons";
+import { Briefcase01Icon, SparklesIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import Link from "next/link";
 
 export default function ExperiencesPage() {
   return (
@@ -21,20 +15,11 @@ export default function ExperiencesPage() {
         title="Roles, Projects & Achievements"
         summary="Showcasing impactful work, technical growth, and real-world problem solving."
       />
-      <div className="relative space-y-6">
+      <section className="relative space-y-6">
         <div className="h-10 w-fit">
-          <Button asChild size="lg" className="absolute right-0 w-50">
-            <Link
-              href={user.resume}
-              target="_blank"
-              className="flex items-center gap-2"
-            >
-              <HugeiconsIcon icon={File02Icon} />
-              View Resume
-            </Link>
-          </Button>
+          <ViewResume />
         </div>
-        <section>
+        <div>
           {experiences.length > 0 ? (
             <>
               <div className="space-y-6">
@@ -68,8 +53,8 @@ export default function ExperiencesPage() {
               </CardContent>
             </Card>
           )}
-        </section>
-      </div>
+        </div>
+      </section>
     </Section>
   );
 }

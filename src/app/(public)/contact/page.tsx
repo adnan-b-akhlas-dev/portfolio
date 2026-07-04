@@ -30,10 +30,11 @@ export default function ContactPage() {
               {/* Image */}
               <div className="border-border relative aspect-square w-3/4 shrink-0 overflow-hidden rounded-2xl border shadow-md">
                 <Image
-                  src="/whatsapp-qr.jpg"
+                  src="/whatsapp-qr.png"
                   alt="WhatsApp_QR_Code"
                   fill
-                  sizes="(max-width: 640px) 80px, 96px"
+                  loading="eager"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
               </div>
@@ -50,7 +51,7 @@ export default function ContactPage() {
                         <div className="bg-primary/10 text-primary flex h-8 w-8 shrink-0 items-center justify-center rounded-md sm:h-10 sm:w-10">
                           <HugeiconsIcon
                             icon={icon}
-                            className="h-4! w-4! sm:h-5! sm:w-5!"
+                            className="h-4! w-4! sm:h-6! sm:w-6!"
                           />
                         </div>
 
@@ -102,7 +103,10 @@ export default function ContactPage() {
                       aria-label={label}
                       target="_blank"
                     >
-                      <HugeiconsIcon icon={icon} className="h-6! w-6!" />
+                      <HugeiconsIcon
+                        icon={icon}
+                        className="h-4! w-4! sm:h-6! sm:w-6!"
+                      />
                       <span className="bg-background border-border text-primary absolute bottom-full mb-1 hidden rounded-md border px-2 py-0.5 text-[10px] font-medium whitespace-nowrap opacity-0 shadow-md transition-all duration-200 group-hover:block group-hover:opacity-100 sm:mb-3 sm:text-xs">
                         {label}
                       </span>
