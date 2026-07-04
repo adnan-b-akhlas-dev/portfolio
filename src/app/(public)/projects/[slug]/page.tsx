@@ -89,7 +89,7 @@ export default function ProjectStudyCasePage() {
         {dummyProject?.technologies && dummyProject.technologies.length > 0 && (
           <Card className="p-6">
             <CardContent className="flex flex-wrap gap-2 p-0">
-              {dummyProject.technologies.map((tech) => (
+              {dummyProject.technologies.map((tech: string) => (
                 <Badge key={tech} variant="secondary">
                   {tech}
                 </Badge>
@@ -159,7 +159,7 @@ export default function ProjectStudyCasePage() {
             <CardContent className="space-y-3 p-0">
               <h3 className="text-lg font-semibold">Results</h3>
               <ul className="list-inside list-disc space-y-1 text-sm text-muted-foreground">
-                {dummyProject.results.map((result, idx) => (
+                {dummyProject.results.map((result: string, idx: number) => (
                   <li key={idx}>{result}</li>
                 ))}
               </ul>
@@ -171,7 +171,7 @@ export default function ProjectStudyCasePage() {
         {dummyProject?.images && dummyProject.images.length > 0 && (
           <Card className="p-6">
             <CardContent className="grid grid-cols-1 gap-4 p-0 sm:grid-cols-2">
-              {dummyProject.images.map((img, idx) => (
+              {dummyProject.images.map((img: string, idx: number) => (
                 <div
                   key={idx}
                   className="relative aspect-video w-full overflow-hidden rounded-xl"
