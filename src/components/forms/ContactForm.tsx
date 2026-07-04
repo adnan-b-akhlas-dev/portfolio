@@ -52,7 +52,7 @@ export default function ContactForm() {
     const result = await sendContactEmail(values);
 
     if (!result.success) {
-      console.error(values);
+      console.error(result);
       toast.error(result.message, { id: toastId });
     }
 
