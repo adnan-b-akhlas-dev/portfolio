@@ -1,4 +1,5 @@
 import Section from "@/components/shared/Section";
+import ViewResume from "@/components/shared/ViewResumeButton";
 import { Button } from "@/components/ui/button";
 import { user } from "@/constants/user";
 import { ArrowRight03Icon, SparklesIcon } from "@hugeicons/core-free-icons";
@@ -48,15 +49,11 @@ export default function HomePage() {
                   <HugeiconsIcon icon={ArrowRight03Icon} />
                 </Link>
               </Button>
-
-              <Button
-                asChild
+              <ViewResume
                 size="lg"
                 variant="outline"
-                className="px-8 py-6 font-medium rounded-lg transition-all duration-300"
-              >
-                <Link href="/contact">Get In Touch</Link>
-              </Button>
+                className="static! px-8 py-6 font-medium rounded-lg transition-all duration-300"
+              />
             </div>
           </div>
         </div>
