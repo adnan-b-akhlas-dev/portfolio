@@ -33,7 +33,8 @@ export default function ContactPage() {
                   src="/whatsapp-qr.png"
                   alt="WhatsApp_QR_Code"
                   fill
-                  loading="lazy"
+                  loading="eager"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
               </div>
