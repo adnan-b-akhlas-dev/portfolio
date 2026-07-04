@@ -7,7 +7,7 @@ import {
   SparklesIcon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import NavigateButton from "./NavigateButton";
+import NavigateButton from "@/components/buttons/NavigateButton";
 
 interface IProps {
   title?: string;

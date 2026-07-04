@@ -1,5 +1,5 @@
 import Section from "@/components/shared/Section";
-import ViewResume from "@/components/shared/ViewResumeButton";
+import ViewResume from "@/components/buttons/ViewResumeButton";
 import { Button } from "@/components/ui/button";
 import { user } from "@/constants/user";
 import { ArrowRight03Icon, SparklesIcon } from "@hugeicons/core-free-icons";

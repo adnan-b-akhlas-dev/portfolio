@@ -1,7 +1,7 @@
-import ExperienceCard from "@/components/shared/ExperienceCard";
+import ExperienceCard from "@/components/cards/ExperienceCard";
 import Section from "@/components/shared/Section";
 import SectionTitle from "@/components/shared/SectionTitle";
-import ViewResume from "@/components/shared/ViewResumeButton";
+import ViewResume from "@/components/buttons/ViewResumeButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { experiences } from "@/constants/experiences";
 import { Briefcase01Icon, SparklesIcon } from "@hugeicons/core-free-icons";
