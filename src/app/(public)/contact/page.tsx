@@ -4,6 +4,7 @@ import SectionTitle from "@/components/shared/SectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
 import { contactLinks, socialLinks } from "@/constants/contacts";
 import { HugeiconsIcon } from "@hugeicons/react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ContactPage() {
@@ -25,7 +26,17 @@ export default function ContactPage() {
         <div className="overflow-hidden rounded-2xl border shadow-xl backdrop-blur-xl">
           <div className="xs:p-4 relative z-50 grid gap-4 p-3 sm:gap-6 sm:p-6 lg:grid-cols-2 2xl:gap-12 2xl:p-12">
             {/* LEFT SECTION */}
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center space-y-4">
+              {/* Image */}
+              <div className="border-border relative aspect-square w-3/4 shrink-0 overflow-hidden rounded-2xl border shadow-md">
+                <Image
+                  src="/whatsapp-qr.jpg"
+                  alt="WhatsApp_QR_Code"
+                  fill
+                  sizes="(max-width: 640px) 80px, 96px"
+                  className="object-cover"
+                />
+              </div>
               <div className="space-y-3 sm:space-y-5">
                 {/* CONTACT LINKS */}
                 <div className="space-y-2 sm:space-y-4">

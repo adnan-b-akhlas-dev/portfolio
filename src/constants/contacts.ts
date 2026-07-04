@@ -1,5 +1,4 @@
 import {
-  BubbleChatIcon,
   Call02Icon,
   GithubIcon,
   Linkedin02Icon,
@@ -51,11 +50,5 @@ export const contactLinks = [
     label: "Location",
     value: "Dhaka, Bangladesh",
     href: "https://maps.google.com?q=Dhaka+Bangladesh",
-  },
-  {
-    icon: BubbleChatIcon,
-    label: "Live Chat",
-    value: "Available on weekdays",
-    href: "/chat",
   },
 ];
