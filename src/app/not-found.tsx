@@ -1,5 +1,5 @@
-import BackButton from "@/components/shared/BackButton";
-import NavigateButton from "@/components/shared/NavigateButton";
+import BackButton from "@/components/buttons/BackButton";
+import NavigateButton from "@/components/buttons/NavigateButton";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   AlertCircleIcon,

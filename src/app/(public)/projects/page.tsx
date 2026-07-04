@@ -1,7 +1,7 @@
 import ProjectCard from "@/components/shared/ProjectCard";
 import Section from "@/components/shared/Section";
 import SectionTitle from "@/components/shared/SectionTitle";
-import ViewResume from "@/components/shared/ViewResumeButton";
+import ViewResume from "@/components/buttons/ViewResumeButton";
 import { Card, CardContent } from "@/components/ui/card";
 import { projects } from "@/constants/projects";
 import { CodeFolderIcon, SparklesIcon } from "@hugeicons/core-free-icons";
