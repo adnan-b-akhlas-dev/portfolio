@@ -60,96 +60,102 @@ export default function SignInForm() {
   };
 
   return (
-    <div className="flex flex-col gap-6 bg-background p-6 border rounded-lg">
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col gap-6"
-      >
-        <FieldGroup>
-          <div className="flex flex-col items-center gap-2 text-center">
-            <Link
-              href="/"
-              className="flex flex-col items-center gap-2 font-medium hover:text-primary transition-colors duration-300"
+    <section className="relative overflow-hidden rounded-xl">
+      {/* Top-left gradient */}
+      <div className="from-primary/25 absolute top-0 -left-32 size-100 rounded-full bg-linear-to-br to-transparent blur-2xl" />
+      {/* Bottom-right gradient */}
+      <div className="from-chart-4/25 absolute -right-32 -bottom-32 h-100 w-85 rounded-full bg-linear-to-tl to-transparent blur-2xl" />
+      <div className="flex flex-col gap-6 p-6 border rounded-xl relative z-10">
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="flex flex-col gap-6"
+        >
+          <FieldGroup>
+            <div className="flex flex-col items-center gap-2 text-center">
+              <Link
+                href="/"
+                className="flex flex-col items-center gap-2 font-medium hover:text-primary transition-colors duration-300"
+              >
+                <div className="flex size-8 items-center justify-center rounded-md">
+                  <LogoIcon className="size-24" />
+                </div>
+
+                <span className="sr-only">Adnan Bin Akhlas</span>
+              </Link>
+
+              <h1 className="text-xl font-bold">Welcome back, Adnan</h1>
+
+              <FieldDescription className="text-center">
+                Sign in to access your portfolio management dashboard.
+              </FieldDescription>
+            </div>
+
+            <Controller
+              name="email"
+              control={form.control}
+              render={({ field, fieldState }) => (
+                <Field data-invalid={fieldState.invalid}>
+                  <FieldLabel htmlFor={field.name}>Email</FieldLabel>
+
+                  <Input
+                    {...field}
+                    id={field.name}
+                    type="email"
+                    placeholder="john@example.com"
+                    autoComplete="email"
+                    aria-invalid={fieldState.invalid}
+                  />
+
+                  {fieldState.invalid && (
+                    <FieldError errors={[fieldState.error]} />
+                  )}
+                </Field>
+              )}
+            />
+
+            <Controller
+              name="password"
+              control={form.control}
+              render={({ field, fieldState }) => (
+                <Field data-invalid={fieldState.invalid}>
+                  <FieldLabel htmlFor={field.name}>Password</FieldLabel>
+
+                  <Input
+                    {...field}
+                    id={field.name}
+                    type="password"
+                    placeholder="********"
+                    autoComplete="current-password"
+                    aria-invalid={fieldState.invalid}
+                  />
+
+                  {fieldState.invalid && (
+                    <FieldError errors={[fieldState.error]} />
+                  )}
+                </Field>
+              )}
+            />
+
+            <Button
+              type="submit"
+              disabled={form.formState.isSubmitting}
+              className="w-full"
             >
-              <div className="flex size-8 items-center justify-center rounded-md">
-                <LogoIcon className="size-24" />
-              </div>
-
-              <span className="sr-only">Adnan Bin Akhlas</span>
-            </Link>
-
-            <h1 className="text-xl font-bold">Welcome back, Adnan</h1>
-
-            <FieldDescription className="text-center">
-              Sign in to access your portfolio management dashboard.
-            </FieldDescription>
-          </div>
-
-          <Controller
-            name="email"
-            control={form.control}
-            render={({ field, fieldState }) => (
-              <Field data-invalid={fieldState.invalid}>
-                <FieldLabel htmlFor={field.name}>Email</FieldLabel>
-
-                <Input
-                  {...field}
-                  id={field.name}
-                  type="email"
-                  placeholder="john@example.com"
-                  autoComplete="email"
-                  aria-invalid={fieldState.invalid}
-                />
-
-                {fieldState.invalid && (
-                  <FieldError errors={[fieldState.error]} />
-                )}
-              </Field>
-            )}
-          />
-
-          <Controller
-            name="password"
-            control={form.control}
-            render={({ field, fieldState }) => (
-              <Field data-invalid={fieldState.invalid}>
-                <FieldLabel htmlFor={field.name}>Password</FieldLabel>
-
-                <Input
-                  {...field}
-                  id={field.name}
-                  type="password"
-                  placeholder="********"
-                  autoComplete="current-password"
-                  aria-invalid={fieldState.invalid}
-                />
-
-                {fieldState.invalid && (
-                  <FieldError errors={[fieldState.error]} />
-                )}
-              </Field>
-            )}
-          />
-
-          <Button
-            type="submit"
-            disabled={form.formState.isSubmitting}
-            className="w-full"
-          >
-            {form.formState.isSubmitting ? (
-              <>
-                <HugeiconsIcon
-                  icon={Loading03Icon}
-                  className="mr-2 size-5 animate-spin"
-                />
-                Signing In...
-              </>
-            ) : (
-              "Sign In"
-            )}
-          </Button>
-        </FieldGroup>
-      </form>
-    </div>
+              {form.formState.isSubmitting ? (
+                <>
+                  <HugeiconsIcon
+                    icon={Loading03Icon}
+                    className="mr-2 size-5 animate-spin"
+                  />
+                  Signing In...
+                </>
+              ) : (
+                "Sign In"
+              )}
+            </Button>
+          </FieldGroup>
+        </form>
+      </div>
+    </section>
   );
 }
