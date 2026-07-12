@@ -4,7 +4,6 @@ import { TContact } from "@/components/forms/ContactForm";
 import env from "@/config/env";
 import ContactAutoReplyEmail from "@/emails/ContactAutoReplyEmail";
 import ContactNotificationEmail from "@/emails/ContactNotificationEmail";
-import { verifyEmail } from "@/lib/mailboxlayer";
 import transporter from "@/lib/nodemailer";
 import { IApiResponse } from "@/types/apiResponse";
 import { render } from "@react-email/components";
@@ -14,29 +13,6 @@ export const sendContactEmail = async <T>(
 ): Promise<IApiResponse<T>> => {
   try {
     const { name, email, phone, subject, message } = payload;
-
-    const emailCheck = await verifyEmail(email);
-
-    if (!emailCheck.format_valid) {
-      return {
-        success: false,
-        message: "Invalid email address.",
-      };
-    }
-
-    if (emailCheck.disposable) {
-      return {
-        success: false,
-        message: "Disposable email addresses are not allowed.",
-      };
-    }
-
-    if (!emailCheck.mx_found) {
-      return {
-        success: false,
-        message: "Email domain cannot receive mail.",
-      };
-    }
 
     const notificationHtml = await render(
       ContactNotificationEmail({ name, email, phone, subject, message }),
