@@ -52,7 +52,6 @@ export default function AboutPage() {
             {/* Top-left gradient */}
             <div className="from-primary/20 absolute top-16 -left-32 h-100 w-100 rounded-full bg-linear-to-br to-transparent blur-2xl" />
             {/* Bottom-right gradient */}
-            <div className="from-chart-4/20 absolute -right-32 -bottom-32 h-100 w-85 rounded-full bg-linear-to-tl to-transparent blur-2xl" />{" "}
             <Card className="group border-border hover:border-primary relative border-2 bg-transparent p-6 text-center shadow-sm backdrop-blur-xl transition-all duration-300">
               <CardContent className="p-0">
                 {/* subtle background glow */}
