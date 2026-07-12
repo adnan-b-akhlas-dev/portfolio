@@ -20,9 +20,9 @@ export default function ExperienceCard({ experience }: IProps) {
   return (
     <div className="relative overflow-hidden rounded-xl">
       {/* Top-left gradient */}
-      <div className="from-primary/20 absolute -top-32 -left-32 h-75 w-75 rounded-full bg-linear-to-br to-transparent blur-2xl sm:h-125 sm:w-125" />
+      <div className="from-primary/20 absolute -top-32 -left-32 size-75 rounded-full bg-linear-to-br to-transparent blur-2xl sm:size-125" />
       {/* Bottom-right gradient */}
-      <div className="from-chart-4/20 absolute -right-32 -bottom-32 h-75 w-75 rounded-full bg-linear-to-tl to-transparent blur-2xl sm:h-125 sm:w-125" />
+      <div className="from-chart-4/20 absolute -right-32 -bottom-32 size-75 rounded-full bg-linear-to-tl to-transparent blur-2xl sm:size-125" />
       <Card className="hover:shadow-primary/5 hover:border-primary border-2 bg-none! backdrop-blur-xl transition-all duration-300 hover:shadow-lg bg-transparent">
         <CardContent className="p-6 md:p-8">
           <div className="mb-4 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">

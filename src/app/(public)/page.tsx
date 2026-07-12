@@ -12,9 +12,9 @@ export default function HomePage() {
       <Section>
         <div className="relative flex flex-col items-center justify-center">
           {/* Top-Left Gradient */}
-          <div className="bg-primary/20 absolute -top-10 left-0 h-96 w-96 animate-pulse rounded-full blur-3xl" />
+          <div className="bg-primary/20 absolute -top-10 left-0 size-96 animate-pulse rounded-full blur-3xl" />
           {/* Bottom-Right Gradient */}
-          <div className="bg-chart-4/20 absolute right-0 -bottom-10 h-96 w-96 animate-pulse rounded-full blur-3xl delay-1000" />
+          <div className="bg-chart-4/20 absolute right-0 -bottom-10 size-96 animate-pulse rounded-full blur-3xl delay-1000" />
           <div className="relative mx-auto space-y-4 text-center">
             <div className="bg-muted/50 border-border text-foreground animate-fade-in hover:text-primary inline-flex cursor-default items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium backdrop-blur-sm transition-all duration-300 hover:scale-105">
               <HugeiconsIcon icon={SparklesIcon} />

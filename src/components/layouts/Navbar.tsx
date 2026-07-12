@@ -55,7 +55,7 @@ export default function Navbar() {
                     <Button
                       asChild
                       className={cn(
-                        "h-12 w-12 transition-colors duration-300 rounded-lg hover:bg-primary hover:text-primary-foreground",
+                        "size-12 transition-colors duration-300 rounded-lg hover:bg-primary hover:text-primary-foreground",
                         {
                           "bg-primary text-primary-foreground":
                             item.href === pathname,

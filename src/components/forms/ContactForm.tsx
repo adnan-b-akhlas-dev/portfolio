@@ -175,13 +175,13 @@ export default function ContactForm() {
             <>
               <HugeiconsIcon
                 icon={Loading03Icon}
-                className="mr-2 h-5! w-5! animate-spin"
+                className="mr-2 size-5 animate-spin"
               />
               Sending…
             </>
           ) : (
             <>
-              <HugeiconsIcon icon={SentIcon} className="mr-2 h-5! w-5!" />
+              <HugeiconsIcon icon={SentIcon} className="mr-2 size-5" />
               Send Message
             </>
           )}
