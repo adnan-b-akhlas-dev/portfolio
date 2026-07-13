@@ -14,7 +14,4 @@ export const user = {
     "https://drive.google.com/file/d/1Y_q7tCTTvB4l7CFpzdSkC--65YbpXrO2/view",
 };
 
-export const appUrl =
-  env.node_env === "production"
-    ? `https://${env.vercel_url}`
-    : `http://${env.next_public_app_url}`;
+export const appUrl = env.next_public_app_url;
