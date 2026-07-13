@@ -18,10 +18,8 @@ const victorMono = Victor_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(appUrl),
-  title: `${user.name} | Full-Stack Web Developer & Software Engineer`,
-  description:
-    user.description ||
-    "Portfolio of a Full-Stack Web Developer specializing in high-performance applications, robust backend systems, scalable databases, and modern JavaScript frameworks.",
+  title: `${user.name} | ${user.designation}`,
+  description: user.description,
   keywords: [
     "Full-Stack Developer",
     "Software Engineer",

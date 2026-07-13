@@ -11,7 +11,7 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: user.name,
-    jobTitle: "Full-Stack Web Developer & Software Engineer",
+    jobTitle: "Full-Stack Web Developer",
     url: appUrl,
     description: user.description,
     knowsAbout: [

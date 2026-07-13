@@ -1,11 +1,12 @@
 import env from "@/config/env";
+import profile from "@/assests/profile.jpeg";
 
 export const user = {
   name: "Adnan Bin Akhlas",
   email: "adnan.b.akhlas.io@gmail.com",
-  image: "/profile.jpeg",
-  designation: "Full-Stack Web Developer & Software Engineer",
-  bio: "Full-Stack Developer | Next.js & Node.js Engineer | Linux & Open Source Enthusiast",
+  image: profile,
+  designation: "Full-Stack Web Developer",
+  bio: "Full-Stack Web Developer | Next.js & Node.js Engineer | Linux & Open Source Enthusiast",
   description:
     "I am a Full-Stack Web Developer specializing in building high-performance web applications, scalable backend architectures, and responsive user interfaces using the MERN stack, Next.js, and TypeScript.",
   story:

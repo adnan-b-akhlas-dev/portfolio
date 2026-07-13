@@ -6,6 +6,7 @@ import { contactLinks, socialLinks } from "@/constants/contacts";
 import { HugeiconsIcon } from "@hugeicons/react";
 import Image from "next/image";
 import Link from "next/link";
+import WhatsappQr from "@/assests/whatsapp-qr.png";
 
 export default function ContactPage() {
   return (
@@ -30,8 +31,9 @@ export default function ContactPage() {
               {/* Image */}
               <div className="border-border relative aspect-square w-3/4 shrink-0 overflow-hidden rounded-2xl border shadow-md">
                 <Image
-                  src="/whatsapp-qr.png"
+                  src={WhatsappQr}
                   alt="WhatsApp_QR_Code"
+                  placeholder="blur"
                   fill
                   loading="eager"
                   sizes="(max-width: 768px) 100vw, 33vw"
