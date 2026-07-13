@@ -1,7 +1,7 @@
 import Section from "@/components/shared/Section";
 import ViewResume from "@/components/buttons/ViewResumeButton";
 import { Button } from "@/components/ui/button";
-import { user } from "@/constants/user";
+import { appUrl, user } from "@/constants/user";
 import { ArrowRight03Icon, SparklesIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
@@ -12,7 +12,7 @@ export default function HomePage() {
     "@type": "Person",
     name: user.name,
     jobTitle: "Full-Stack Web Developer & Software Engineer",
-    url: "https://adnan-b-akhlas.vercel.app",
+    url: appUrl,
     description: user.description,
     knowsAbout: [
       "Full-Stack Web Development",
