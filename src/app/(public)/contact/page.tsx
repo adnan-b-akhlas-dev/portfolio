@@ -18,10 +18,10 @@ export default function ContactPage() {
 
       <div className="relative overflow-hidden rounded-2xl">
         {/* Top-left gradient */}
-        <div className="from-primary/20 absolute -top-32 -left-32 h-75 w-75 rounded-full bg-linear-to-br to-transparent blur-2xl sm:h-125 sm:w-125" />
+        <div className="from-primary/20 absolute -top-32 -left-32 size-75 rounded-full bg-linear-to-br to-transparent blur-2xl sm:size-125" />
 
         {/* Bottom-right gradient */}
-        <div className="from-chart-4/20 absolute -right-32 -bottom-32 h-75 w-75 rounded-full bg-linear-to-tl to-transparent blur-2xl sm:h-125 sm:w-125" />
+        <div className="from-chart-4/20 absolute -right-32 -bottom-32 size-75 rounded-full bg-linear-to-tl to-transparent blur-2xl sm:size-125" />
 
         <div className="overflow-hidden rounded-2xl border shadow-xl backdrop-blur-xl">
           <div className="xs:p-4 relative z-50 grid gap-4 p-3 sm:gap-6 sm:p-6 lg:grid-cols-2 2xl:gap-12 2xl:p-12">
@@ -48,10 +48,10 @@ export default function ContactPage() {
                     >
                       <CardContent className="flex flex-col items-start gap-2.5 p-3 sm:gap-4 sm:p-5 md:flex-row">
                         {/* ICON */}
-                        <div className="bg-primary/10 text-primary flex h-8 w-8 shrink-0 items-center justify-center rounded-md sm:h-10 sm:w-10">
+                        <div className="bg-primary/10 text-primary flex shrink-0 items-center justify-center rounded-md size-8 sm:size-10">
                           <HugeiconsIcon
                             icon={icon}
-                            className="h-4! w-4! sm:h-6! sm:w-6!"
+                            className="size-4 sm:size-6"
                           />
                         </div>
 
@@ -103,10 +103,7 @@ export default function ContactPage() {
                       aria-label={label}
                       target="_blank"
                     >
-                      <HugeiconsIcon
-                        icon={icon}
-                        className="h-4! w-4! sm:h-6! sm:w-6!"
-                      />
+                      <HugeiconsIcon icon={icon} className="size-4 sm:size-6" />
                       <span className="bg-background border-border text-primary absolute bottom-full mb-1 hidden rounded-md border px-2 py-0.5 text-[10px] font-medium whitespace-nowrap opacity-0 shadow-md transition-all duration-200 group-hover:block group-hover:opacity-100 sm:mb-3 sm:text-xs">
                         {label}
                       </span>

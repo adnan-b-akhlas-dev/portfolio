@@ -36,7 +36,7 @@ export default async function ProjectCard({ project }: IProps) {
   return (
     <div className="relative overflow-hidden rounded-xl">
       {/* Top-left gradient */}
-      <div className="from-primary/25 absolute top-16 -left-32 h-100 w-100 rounded-full bg-linear-to-br to-transparent blur-2xl" />
+      <div className="from-primary/25 absolute top-16 -left-32 size-100 rounded-full bg-linear-to-br to-transparent blur-2xl" />
       {/* Bottom-right gradient */}
       <div className="from-chart-4/25 absolute -right-32 -bottom-32 h-100 w-85 rounded-full bg-linear-to-tl to-transparent blur-2xl" />
       <Card className="group border-border hover:border-primary h-full gap-4 overflow-hidden rounded-xl border-2 pt-0 shadow-sm backdrop-blur-xl transition-all hover:shadow-md bg-transparent">

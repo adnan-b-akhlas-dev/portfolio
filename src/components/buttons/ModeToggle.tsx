@@ -34,7 +34,7 @@ export default function ModeToggle({ setIsOpen }: IProps) {
     <Tooltip>
       <TooltipTrigger asChild>
         <Button
-          className="h-12 w-12 transition-colors duration-300 rounded-lg hover:bg-primary hover:text-primary-foreground"
+          className="size-12 transition-colors duration-300 rounded-lg hover:bg-primary hover:text-primary-foreground"
           onClick={toggleTheme}
           variant="secondary"
           aria-label={

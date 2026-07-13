@@ -50,9 +50,8 @@ export default function AboutPage() {
         {stats.map(({ label, count, icon }) => (
           <div key={label} className="relative overflow-hidden rounded-xl">
             {/* Top-left gradient */}
-            <div className="from-primary/20 absolute top-16 -left-32 h-100 w-100 rounded-full bg-linear-to-br to-transparent blur-2xl" />
+            <div className="from-primary/20 absolute top-16 -left-32 size-100 rounded-full bg-linear-to-br to-transparent blur-2xl" />
             {/* Bottom-right gradient */}
-            <div className="from-chart-4/20 absolute -right-32 -bottom-32 h-100 w-85 rounded-full bg-linear-to-tl to-transparent blur-2xl" />{" "}
             <Card className="group border-border hover:border-primary relative border-2 bg-transparent p-6 text-center shadow-sm backdrop-blur-xl transition-all duration-300">
               <CardContent className="p-0">
                 {/* subtle background glow */}
@@ -60,7 +59,7 @@ export default function AboutPage() {
 
                 {/* icon */}
                 <div className="mb-3 flex justify-center">
-                  <div className="bg-primary/10 group-hover:bg-primary/20 flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-300">
+                  <div className="bg-primary/10 group-hover:bg-primary/20 flex size-14 items-center justify-center rounded-2xl transition-all duration-300">
                     <HugeiconsIcon icon={icon} />
                   </div>
                 </div>

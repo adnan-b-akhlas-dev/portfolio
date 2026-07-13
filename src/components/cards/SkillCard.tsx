@@ -34,7 +34,7 @@ export default function SkillCard({ skill }: IProps) {
     <div className="relative overflow-hidden rounded-xl">
       {/* Top-left gradient */}
       <div
-        className={`${ORB_CLASSES[color]} absolute top-16 -left-32 h-100 w-100 rounded-full bg-linear-to-br to-transparent blur-2xl`}
+        className={`${ORB_CLASSES[color]} absolute top-16 -left-32 size-100 rounded-full bg-linear-to-br to-transparent blur-2xl`}
       />
       {/* Bottom-right gradient */}
       <div className="from-chart-4/25 absolute -right-32 -bottom-32 h-100 w-85 rounded-full bg-linear-to-tl to-transparent blur-2xl" />
@@ -43,7 +43,7 @@ export default function SkillCard({ skill }: IProps) {
         <CardHeader>
           <div className="flex items-center gap-3">
             <div
-              className={`${ICON_BOX_CLASSES[color]} flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border transition-transform group-hover:scale-105`}
+              className={`${ICON_BOX_CLASSES[color]} flex size-11 shrink-0 items-center justify-center rounded-xl border transition-transform group-hover:scale-105`}
             >
               <HugeiconsIcon icon={icon} size={24} />
             </div>

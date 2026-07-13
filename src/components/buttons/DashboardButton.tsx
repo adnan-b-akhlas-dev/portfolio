@@ -19,7 +19,7 @@ export default function DashboardButton({ setIsOpen }: DashboardButtonProps) {
       <TooltipTrigger asChild>
         <Button
           asChild
-          className="h-12 w-12 transition-colors duration-300 rounded-lg hover:bg-primary hover:text-primary-foreground"
+          className="size-12 transition-colors duration-300 rounded-lg hover:bg-primary hover:text-primary-foreground"
           onClick={() => setIsOpen(false)}
           variant="secondary"
           aria-label="Dashboard"

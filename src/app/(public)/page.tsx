@@ -7,27 +7,52 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
 
 export default function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: user.name,
+    jobTitle: "Full-Stack Web Developer & Software Engineer",
+    url: "https://adnan-b-akhlas.vercel.app",
+    description: user.description,
+    knowsAbout: [
+      "Full-Stack Web Development",
+      "Frontend Engineering",
+      "Backend Systems Architecture",
+      "React & Next.js Frameworks",
+      "Node.js & Express Ecosystems",
+      "MongoDB & Database Sharding",
+      "Systems Programming (Go, Rust)",
+      "Linux Systems Administration",
+      "Test-Driven Development (TDD)",
+    ],
+  };
+
   return (
     <div className="overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <Section>
         <div className="relative flex flex-col items-center justify-center">
           {/* Top-Left Gradient */}
-          <div className="bg-primary/20 absolute -top-10 left-0 h-96 w-96 animate-pulse rounded-full blur-3xl" />
+          <div className="bg-primary/20 absolute -top-10 left-0 size-96 animate-pulse rounded-full blur-3xl" />
           {/* Bottom-Right Gradient */}
-          <div className="bg-chart-4/20 absolute right-0 -bottom-10 h-96 w-96 animate-pulse rounded-full blur-3xl delay-1000" />
+          <div className="bg-chart-4/20 absolute right-0 -bottom-10 size-96 animate-pulse rounded-full blur-3xl delay-1000" />
+
           <div className="relative mx-auto space-y-4 text-center">
             <div className="bg-muted/50 border-border text-foreground animate-fade-in hover:text-primary inline-flex cursor-default items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium backdrop-blur-sm transition-all duration-300 hover:scale-105">
               <HugeiconsIcon icon={SparklesIcon} />
               <span>Available for new opportunities</span>
             </div>
 
+            {/* Semantic heading hierarchy optimized for search crawlers */}
             <h1 className="text-foreground animate-fade-in-up text-4xl leading-tight font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-              Hi, I&apos;m
-              <div
-                className={`from-primary to-chart-4 bg-linear-to-r bg-clip-text text-transparent`}
-              >
-                <strong className="italic">{user.name}</strong>
-              </div>
+              Hi, I&apos;m{" "}
+              <span className="from-primary to-chart-4 bg-linear-to-r bg-clip-text text-transparent block">
+                <strong className="italic font-bold">{user.name}</strong>
+              </span>
             </h1>
 
             <p className="text-chart-5 animate-fade-in-up mx-auto w-full max-w-4xl text-lg leading-relaxed font-light delay-200 sm:text-2xl">

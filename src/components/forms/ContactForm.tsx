@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 
+import { sendContactEmail } from "@/actions/contact";
 import { Button } from "@/components/ui/button";
 import {
   Field,
@@ -17,7 +18,6 @@ import { handleKeyPress } from "@/helpers/handleKeyPress";
 import { Loading03Icon, SentIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { toast } from "sonner";
-import { sendContactEmail } from "@/actions/contact";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -49,15 +49,22 @@ export default function ContactForm() {
 
   const onSubmit = async (values: TContact) => {
     const toastId = toast.loading("Sending your message…");
-    const result = await sendContactEmail(values);
+    try {
+      const result = await sendContactEmail(values);
 
-    if (!result.success) {
-      console.error(result);
-      toast.error(result.message, { id: toastId });
+      if (!result.success) {
+        console.error(result);
+        toast.error(result.message, { id: toastId });
+      }
+
+      form.reset();
+      toast.success(result.message, { id: toastId });
+    } catch (error: unknown) {
+      console.error(error);
+      toast.error("Something went wrong. Please try again.", {
+        id: toastId,
+      });
     }
-
-    form.reset();
-    toast.success(result.message, { id: toastId });
   };
 
   return (
@@ -175,13 +182,13 @@ export default function ContactForm() {
             <>
               <HugeiconsIcon
                 icon={Loading03Icon}
-                className="mr-2 h-5! w-5! animate-spin"
+                className="mr-2 size-5 animate-spin"
               />
               Sending…
             </>
           ) : (
             <>
-              <HugeiconsIcon icon={SentIcon} className="mr-2 h-5! w-5!" />
+              <HugeiconsIcon icon={SentIcon} className="mr-2 size-5" />
               Send Message
             </>
           )}
