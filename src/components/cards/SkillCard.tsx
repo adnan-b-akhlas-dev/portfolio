@@ -7,8 +7,6 @@ interface IProps {
   skill: ISkill;
 }
 
-// Tailwind's JIT scanner needs literal class strings, so color variants
-// are mapped here rather than interpolated (e.g. `from-${color}/25`).
 const ORB_CLASSES: Record<ISkill["color"], string> = {
   primary: "from-primary/25",
   "chart-1": "from-chart-1/25",
@@ -44,10 +42,11 @@ export default function SkillCard({ skill }: IProps) {
           <div className="flex items-center gap-3">
             <div
               className={`${ICON_BOX_CLASSES[color]} flex size-11 shrink-0 items-center justify-center rounded-xl border transition-transform group-hover:scale-105`}
+              aria-hidden="true"
             >
               <HugeiconsIcon icon={icon} size={24} />
             </div>
-            <CardTitle className="text-foreground text-lg font-semibold">
+            <CardTitle className="text-foreground text-lg font-semibold tracking-tight">
               {title}
             </CardTitle>
           </div>

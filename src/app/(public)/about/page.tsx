@@ -54,9 +54,9 @@ export default function AboutPage() {
         header="About Me"
         title="Crafting Scalable Web Experiences"
         summary="I build modular, maintainable systems that blend elegant design with powerful, developer-first engineering principles."
+        headingTag="h1"
       />
 
-      {/* Wrapped layout grid in a semantic article tag for web content crawlers */}
       <article className="grid items-start gap-8 lg:grid-cols-2">
         <div className="flex justify-between lg:justify-end">
           <div className="group relative grow">
@@ -89,7 +89,6 @@ export default function AboutPage() {
         </div>
       </article>
 
-      {/* Stats Section with semantic labeling */}
       <section className="col-span-2 mt-8 grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {stats.map(({ label, count, icon }) => (
           <div key={label} className="relative overflow-hidden rounded-xl">
