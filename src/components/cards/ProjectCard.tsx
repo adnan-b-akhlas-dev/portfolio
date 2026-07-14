@@ -5,7 +5,6 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { IProject } from "@/interfaces/projects.interfaces";
 import {
@@ -21,7 +20,7 @@ interface IProps {
   project: IProject;
 }
 
-export default async function ProjectCard({ project }: IProps) {
+export default function ProjectCard({ project }: IProps) {
   const {
     slug,
     title,
@@ -34,88 +33,109 @@ export default async function ProjectCard({ project }: IProps) {
   } = project;
 
   return (
-    <div className="relative overflow-hidden rounded-xl">
-      {/* Top-left gradient */}
-      <div className="from-primary/25 absolute top-16 -left-32 size-100 rounded-full bg-linear-to-br to-transparent blur-2xl" />
-      {/* Bottom-right gradient */}
-      <div className="from-chart-4/25 absolute -right-32 -bottom-32 h-100 w-85 rounded-full bg-linear-to-tl to-transparent blur-2xl" />
-      <Card className="group border-border hover:border-primary h-full gap-4 overflow-hidden rounded-xl border-2 pt-0 shadow-sm backdrop-blur-xl transition-all hover:shadow-md bg-transparent">
+    <article className="relative overflow-hidden rounded-xl h-full">
+      <div
+        aria-hidden="true"
+        className="from-primary/25 absolute top-16 -left-32 size-100 rounded-full bg-linear-to-br to-transparent blur-2xl"
+      />
+      <div
+        aria-hidden="true"
+        className="from-chart-4/25 absolute -right-32 -bottom-32 h-100 w-85 rounded-full bg-linear-to-tl to-transparent blur-2xl"
+      />
+
+      <Card className="group border-border hover:border-primary h-full flex flex-col overflow-hidden rounded-xl border-2 pt-0 shadow-sm backdrop-blur-xl transition-all hover:shadow-md bg-transparent">
         {/* Thumbnail */}
         <div className="relative h-48 w-full overflow-hidden">
           <Image
             src={thumbnail}
-            alt={title}
+            alt={`${title} Project Preview Thumbnail`}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
-          <Badge className="absolute top-4 right-4 z-20">{category}</Badge>
+          <Badge className="absolute top-4 right-4 z-20 font-medium">
+            {category}
+          </Badge>
         </div>
 
-        {/* Title */}
         <CardHeader>
-          <CardTitle className="text-foreground line-clamp-1 text-lg font-semibold">
+          <h3 className="text-foreground line-clamp-1 text-lg font-semibold tracking-tight">
             {title}
-          </CardTitle>
+          </h3>
         </CardHeader>
 
-        {/* Description */}
         <CardContent className="grow">
-          <p className="text-muted-foreground line-clamp-2 text-sm">
+          <p className="text-muted-foreground line-clamp-2 text-sm leading-relaxed">
             {description}
           </p>
         </CardContent>
 
-        {/* Links */}
-        <CardFooter className="flex-col gap-6">
-          <div className="mt-2 flex w-full items-center justify-between gap-4">
+        <CardFooter className="flex-col gap-4 mt-auto">
+          <div className="flex w-full items-center justify-between gap-2">
             {liveLink && (
               <Button
                 className="border-b-transparent! hover:border-b-primary! border-b! text-primary hover:text-primary p-0! pb-0.5! h-fit rounded-none!"
+                variant="ghost"
                 asChild
-                variant={"ghost"}
               >
-                <a href={liveLink} target="_blank" rel="noopener noreferrer">
-                  <HugeiconsIcon icon={Globe02Icon} /> Live
+                <a
+                  href={liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${title} Live Production Website`}
+                >
+                  <HugeiconsIcon icon={Globe02Icon} aria-hidden="true" /> Live
                 </a>
               </Button>
             )}
+
             {clientRepoLink && (
               <Button
                 className="border-b-transparent! hover:border-b-primary! border-b! text-primary hover:text-primary p-0! pb-0.5! h-fit rounded-none!"
+                variant="ghost"
                 asChild
-                variant={"ghost"}
               >
                 <a
                   href={clientRepoLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`View ${title} Frontend Source Code Repository`}
                 >
-                  <HugeiconsIcon icon={MonitorDotIcon} /> Client
+                  <HugeiconsIcon icon={MonitorDotIcon} aria-hidden="true" />{" "}
+                  Client
                 </a>
               </Button>
             )}
+
             {serverRepoLink && (
               <Button
                 className="border-b-transparent! hover:border-b-primary! border-b! text-primary hover:text-primary p-0! pb-0.5! h-fit rounded-none!"
+                variant="ghost"
                 asChild
-                variant={"ghost"}
               >
                 <a
                   href={serverRepoLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`View ${title} Backend Server Source Code Repository`}
                 >
-                  <HugeiconsIcon icon={ServerStack01Icon} /> Server
+                  <HugeiconsIcon icon={ServerStack01Icon} aria-hidden="true" />{" "}
+                  Server
                 </a>
               </Button>
             )}
           </div>
-          <Button asChild className="w-full">
-            <Link href={`/projects/${slug}`}>View Case Study</Link>
+
+          <Button asChild className="w-full font-medium" variant="default">
+            <Link
+              href={`/projects/${slug}`}
+              aria-label={`Read structural case study for ${title}`}
+            >
+              View Case Study
+            </Link>
           </Button>
         </CardFooter>
       </Card>
-    </div>
+    </article>
   );
 }
